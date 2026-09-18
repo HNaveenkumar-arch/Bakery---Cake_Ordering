@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Bakery & Cake Ordering</title>
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+
+    <div class="loader-wrapper" id="preloader">
+        <div class="loader"></div>
+        <p>Stackly Bakery...</p>
+    </div>
+
+
+    <header class="navbar" id="navbar">
+        <a href="index.html" class="logo-link" data-aos="fade-right">
+            <img src="./asset/redlogo.webp" alt="Stackly Logo" class="logo">
+        </a>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-menu" id="nav-menu">
+            <ul class="nav-links">
+                <li data-aos="fade-up" data-aos-delay="100"><a href="index.html">Home</a></li>
+                <li data-aos="fade-up" data-aos-delay="200"><a href="about.html">About</a></li>
+                <li data-aos="fade-up" data-aos-delay="300"><a href="service.html">Service</a></li>
+                <li data-aos="fade-up" data-aos-delay="400"><a href="blog.html" class="active">Blog</a></li>
+                <li data-aos="fade-up" data-aos-delay="500"><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-buttons" data-aos="fade-up" data-aos-delay="600">
+                <a href="login.html" class="btn login-btn">Login</a>
+                <a href="signup.html" class="btn signup-btn">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- =========================================
+   Blog Hero Section (Red & White Premium Theme)
+========================================= -->
+    <section class="blog-hero-section" id="blog-hero">
+
+
+        <div class="bh-bg" id="bh-bg-img" style="background-image: url('./asset/a51.webp');"></div>
+
+
+        <div class="bh-overlay"></div>
+
+        <div class="bh-container">
+
+
+            <div class="bh-left">
+
+
+                <div class="breadcrumb-card">
+                    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                    <i class="fa-solid fa-angles-right divider"></i>
+                    <span class="current">Blog</span>
+                </div>
+
+
+                <div class="bh-text-wrapper">
+                    <div class="bh-featured-label" id="bh-dyn-label">
+                        <i class="fa-solid fa-star"></i> Featured Story
+                    </div>
+
+                    <h1 class="bh-title" id="bh-dyn-title">The Sweet Side <br><span class="red-text">Of Life.</span>
+                    </h1>
+                    <p class="bh-desc" id="bh-dyn-desc">Discover delicious recipes, baking secrets, cake inspiration and
+                        stories from our bakery.</p>
+                </div>
+
+
+                <div class="bh-btns">
+                    <a href="404page.html" class="bh-primary-btn">Explore Articles</a>
+                    <a href="404page.html" class="bh-outline-btn">Discover Our Cakes</a>
+                </div>
+
+            </div>
+
+
+            <div class="bh-right">
+                <div class="bh-image-wrapper">
+                    <img src="./asset/a12.webp" alt="Blog Featured" id="bh-dyn-img" class="bh-main-img">
+
+
+                    <div class="bh-read-tag">
+                        <span>5 Min</span> Read
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================================
+   Blog Categories Section (Infinite Marquee)
+========================================= -->
+    <section class="blog-cat-section" id="blog-categories">
+
+        <div class="blog-cat-header">
+            <h4 class="cat-subtitle"><i class="fa-solid fa-compass"></i> Discover</h4>
+            <h2 class="cat-title">Explore Our <span class="red-text">Sweet World.</span></h2>
+        </div>
+
+
+        <div class="cat-marquee-wrapper">
+            <div class="cat-marquee-track">
+
+
+
+                <a href="404page.html" class="cat-card">
+                    <div class="cat-img-box"><img src="./asset/a16.webp" alt="Baking Tips"></div>
+                    <div class="cat-info">
+                        <h3>Baking Tips</h3>
+                        <p>Master the basics.</p>
+                    </div>
+                </a>
+
+                <div class="cat-divider">✦</div>
+
+                <a href="404page.html" class="cat-card">
+                    <div class="cat-img-box"><img src="./asset/a13.webp" alt="Cake Inspiration"></div>
+                    <div class="cat-info">
+                        <h3>Cake Inspiration</h3>
+                        <p>Beautiful designs.</p>
+                    </div>
+                </a>
+
+                <div class="cat-divider">✦</div>
+
+                <a href="404page.html" class="cat-card">
+                    <div class="cat-img-box"><img src="./asset/a33.webp" alt="Recipes"></div>
+                    <div class="cat-info">
+                        <h3>Recipes</h3>
+                        <p>Step-by-step guides.</p>
+                    </div>
+                </a>
+
+                <div class="cat-divider">✦</div>
+
+                <a href="404page.html" class="cat-card">
+                    <div class="cat-img-box"><img src="./asset/a39.webp" alt="Celebrations"></div>
+                    <div class="cat-info">
+                        <h3>Celebrations</h3>
+                        <p>Party ideas & more.</p>
+                    </div>
+                </a>
+
+                <div class="cat-divider">✦</div>
+
+                <a href="404page.html" class="cat-card">
+                    <div class="cat-img-box"><img src="./asset/a5.webp" alt="Bakery Stories"></div>
+                    <div class="cat-info">
+                        <h3>Bakery Stories</h3>
+                        <p>Behind the scenes.</p>
+                    </div>
+                </a>
+
+                <div class="cat-divider">✦</div>
+
+                <a href="404page.html" class="cat-card">
+                    <div class="cat-img-box"><img src="./asset/a50.webp" alt="Desserts"></div>
+                    <div class="cat-info">
+                        <h3>Desserts</h3>
+                        <p>Sweet cravings.</p>
+                    </div>
+                </a>
+
+                <div class="cat-divider">✦</div>
+
+
+
+                <a href="404page.html" class="cat-card">
+                    <div class="cat-img-box"><img src="./asset/a16.webp" alt="Baking Tips"></div>
+                    <div class="cat-info">
+                        <h3>Baking Tips</h3>
+                        <p>Master the basics.</p>
+                    </div>
+                </a>
+
+                <div class="cat-divider">✦</div>
+
+                <a href="404page.html" class="cat-card">
+                    <div class="cat-img-box"><img src="./asset/a13.webp" alt="Cake Inspiration"></div>
+                    <div class="cat-info">
+                        <h3>Cake Inspiration</h3>
+                        <p>Beautiful designs.</p>
+                    </div>
+                </a>
+
+                <div class="cat-divider">✦</div>
+
+                <a href="404page.html" class="cat-card">
+                    <div class="cat-img-box"><img src="./asset/a33.webp" alt="Recipes"></div>
+                    <div class="cat-info">
+                        <h3>Recipes</h3>
+                        <p>Step-by-step guides.</p>
+                    </div>
+                </a>
+
+                <div class="cat-divider">✦</div>
+
+                <a href="404page.html" class="cat-card">
+                    <div class="cat-img-box"><img src="./asset/a39.webp" alt="Celebrations"></div>
+                    <div class="cat-info">
+                        <h3>Celebrations</h3>
+                        <p>Party ideas & more.</p>
+                    </div>
+                </a>
+
+                <div class="cat-divider">✦</div>
+
+                <a href="404page.html" class="cat-card">
+                    <div class="cat-img-box"><img src="./asset/a5.webp" alt="Bakery Stories"></div>
+                    <div class="cat-info">
+                        <h3>Bakery Stories</h3>
+                        <p>Behind the scenes.</p>
+                    </div>
+                </a>
+
+                <div class="cat-divider">✦</div>
+
+                <a href="404page.html" class="cat-card">
+                    <div class="cat-img-box"><img src="./asset/a50.webp" alt="Desserts"></div>
+                    <div class="cat-info">
+                        <h3>Desserts</h3>
+                        <p>Sweet cravings.</p>
+                    </div>
+                </a>
+
+                <div class="cat-divider">✦</div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================
+   Baker's Corner Section (Premium Sticky Scroll)
+========================================= -->
+    <section class="baker-corner-section" id="baker-corner">
+
+        <div class="bc-main-header">
+            <h4 class="bc-subtitle">Behind The Oven</h4>
+            <h2 class="bc-title">Stories From Our <span class="red-text">Master Bakers.</span></h2>
+        </div>
+
+        <div class="bc-container">
+
+
+            <div class="bc-left">
+                <div class="bc-sticky-wrapper">
+
+                    <img src="./asset/a51.webp" alt="Recipe Secret" class="bc-img active-bc-img" id="bc-img-0">
+                    <img src="./asset/a19.webp" alt="Morning Prep" class="bc-img" id="bc-img-1">
+                    <img src="./asset/a17.webp" alt="Cake Decoration" class="bc-img" id="bc-img-2">
+                    <img src="./asset/a6.webp" alt="Baking Tools" class="bc-img" id="bc-img-3">
+
+
+                    <div class="bc-frame-border"></div>
+                </div>
+            </div>
+
+
+            <div class="bc-right">
+
+
+                <div class="bc-step" data-index="0">
+                    <div class="bc-watermark">01</div>
+                    <div class="bc-content-box">
+                        <img src="./asset/a51.webp" class="bc-mobile-img" alt="Recipe Secret">
+                        <h3>The Secret Behind Our Recipes</h3>
+                        <p>Discover how our bakery creates delicious flavours. From sourcing the finest vanilla beans to
+                            blending premium cocoa, every recipe is a masterpiece of precision.</p>
+                    </div>
+                </div>
+
+
+                <div class="bc-step" data-index="1">
+                    <div class="bc-watermark">02</div>
+                    <div class="bc-content-box">
+                        <img src="./asset/a19.webp" class="bc-mobile-img" alt="Morning Prep">
+                        <h3>A Day In Our Bakery</h3>
+                        <p>Follow our bakers from morning preparation to final decoration. Before the sun rises, our
+                            ovens are warm, and the sweet aroma of freshly baked dough fills the air.</p>
+                    </div>
+                </div>
+
+
+                <div class="bc-step" data-index="2">
+                    <div class="bc-watermark">03</div>
+                    <div class="bc-content-box">
+                        <img src="./asset/a17.webp" class="bc-mobile-img" alt="Cake Decoration">
+                        <h3>The Art Of Cake Decoration</h3>
+                        <p>Explore the creativity behind beautiful custom cakes. Our decorators use piping bags like
+                            paintbrushes, turning soft buttercream into edible floral masterpieces.</p>
+                    </div>
+                </div>
+
+
+                <div class="bc-step" data-index="3">
+                    <div class="bc-watermark">04</div>
+                    <div class="bc-content-box">
+                        <img src="./asset/a6.webp" class="bc-mobile-img" alt="Baking Tools">
+                        <h3>Our Favourite Baking Tools</h3>
+                        <p>A look at the tools that help create perfect treats. From heavy-duty stand mixers to delicate
+                            offset spatulas, perfection requires the right instruments.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================================
+   Recipe Spotlight Section (Editorial Accordion)
+========================================= -->
+    <section class="recipe-spotlight-section" id="recipe-spotlight">
+        <div class="rs-container">
+
+            <div class="rs-header">
+                <h4 class="rs-subtitle">Bake Something Beautiful</h4>
+                <h2 class="rs-title">Simple Recipes. <br><span class="red-text">Delicious Results.</span></h2>
+            </div>
+
+
+            <div class="rs-accordion-wrapper">
+
+
+                <div class="rs-item active-rs">
+                    <div class="rs-head">
+                        <div class="rs-head-left">
+                            <span class="rs-num">01</span>
+                            <div class="rs-head-text">
+                                <h3>Classic Chocolate Cake</h3>
+                                <p>Rich, soft and deeply chocolatey.</p>
+                            </div>
+                        </div>
+                        <div class="rs-expand-btn">
+                            <span class="rs-expand-text">Expand</span>
+                            <div class="rs-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="rs-body">
+                        <div class="rs-body-inner">
+                            <div class="rs-body-content">
+
+                                <div class="rs-img-box">
+                                    <img src="./asset/a45.webp" alt="Chocolate Cake">
+                                </div>
+
+
+                                <div class="rs-details">
+                                    <div class="rs-meta">
+                                        <span><i class="fa-regular fa-clock"></i> Prep: 20 Mins</span>
+                                        <span><i class="fa-solid fa-fire-burner"></i> Bake: 35 Mins</span>
+                                    </div>
+
+                                    <div class="rs-notebook">
+                                        <h4>Key Ingredients</h4>
+                                        <ul class="rs-list">
+                                            <li><i class="fa-solid fa-check"></i> 2 cups All-purpose flour</li>
+                                            <li><i class="fa-solid fa-check"></i> ¾ cup Unsweetened cocoa powder</li>
+                                            <li><i class="fa-solid fa-check"></i> 1 ½ tsp Baking powder & baking soda
+                                            </li>
+                                            <li><i class="fa-solid fa-check"></i> 1 cup Milk & ½ cup vegetable oil</li>
+                                        </ul>
+
+                                        <h4><i class="fa-solid fa-lightbulb"></i> Baker's Tip</h4>
+                                        <p class="rs-tip">Use hot water or hot brewed coffee at the end of the batter
+                                            mixing to enhance the rich chocolate flavor.</p>
+                                    </div>
+
+                                    <a href="404page.html" class="bh-primary-btn rs-btn">View Full Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="rs-item">
+                    <div class="rs-head">
+                        <div class="rs-head-left">
+                            <span class="rs-num">02</span>
+                            <div class="rs-head-text">
+                                <h3>Vanilla Bean Cupcakes</h3>
+                                <p>Light, fluffy and delicately sweet.</p>
+                            </div>
+                        </div>
+                        <div class="rs-expand-btn">
+                            <span class="rs-expand-text">Expand</span>
+                            <div class="rs-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="rs-body">
+                        <div class="rs-body-inner">
+                            <div class="rs-body-content">
+                                <div class="rs-img-box">
+                                    <img src="./asset/a49.webp" alt="Vanilla Cupcakes">
+                                </div>
+                                <div class="rs-details">
+                                    <div class="rs-meta">
+                                        <span><i class="fa-regular fa-clock"></i> Prep: 15 Mins</span>
+                                        <span><i class="fa-solid fa-fire-burner"></i> Bake: 20 Mins</span>
+                                    </div>
+                                    <div class="rs-notebook">
+                                        <h4>Key Ingredients</h4>
+                                        <ul class="rs-list">
+                                            <li><i class="fa-solid fa-check"></i> 1 ½ cups Cake flour</li>
+                                            <li><i class="fa-solid fa-check"></i> 1 cup Granulated sugar</li>
+                                            <li><i class="fa-solid fa-check"></i> ½ cup Unsalted butter (room temp)</li>
+                                            <li><i class="fa-solid fa-check"></i> 2 tsp Pure vanilla bean paste</li>
+                                        </ul>
+                                        <h4><i class="fa-solid fa-lightbulb"></i> Baker's Tip</h4>
+                                        <p class="rs-tip">Do not overmix the batter. Mix just until the dry ingredients
+                                            are incorporated to keep the cupcakes fluffy.</p>
+                                    </div>
+                                    <a href="404page.html" class="bh-primary-btn rs-btn">View Full Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="rs-item">
+                    <div class="rs-head">
+                        <div class="rs-head-left">
+                            <span class="rs-num">03</span>
+                            <div class="rs-head-text">
+                                <h3>Homemade Choco Cookies</h3>
+                                <p>Crispy edges with soft, gooey centres.</p>
+                            </div>
+                        </div>
+                        <div class="rs-expand-btn">
+                            <span class="rs-expand-text">Expand</span>
+                            <div class="rs-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="rs-body">
+                        <div class="rs-body-inner">
+                            <div class="rs-body-content">
+                                <div class="rs-img-box">
+                                    <img src="./asset/a16.webp" alt="Cookies">
+                                </div>
+                                <div class="rs-details">
+                                    <div class="rs-meta">
+                                        <span><i class="fa-regular fa-clock"></i> Prep: 15 Mins</span>
+                                        <span><i class="fa-solid fa-fire-burner"></i> Bake: 12 Mins</span>
+                                    </div>
+                                    <div class="rs-notebook">
+                                        <h4>Key Ingredients</h4>
+                                        <ul class="rs-list">
+                                            <li><i class="fa-solid fa-check"></i> 2 ¼ cups All-purpose flour</li>
+                                            <li><i class="fa-solid fa-check"></i> ¾ cup Brown sugar & ¾ cup white sugar
+                                            </li>
+                                            <li><i class="fa-solid fa-check"></i> 1 cup Softened butter</li>
+                                            <li><i class="fa-solid fa-check"></i> 2 cups Semi-sweet chocolate chips</li>
+                                        </ul>
+                                        <h4><i class="fa-solid fa-lightbulb"></i> Baker's Tip</h4>
+                                        <p class="rs-tip">Chill the cookie dough in the fridge for at least 30 minutes
+                                            before baking to prevent them from spreading too flat.</p>
+                                    </div>
+                                    <a href="404page.html" class="bh-primary-btn rs-btn">View Full Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================
+   Celebration Inspiration (Auto-Moving Cards)
+========================================= -->
+    <section class="cel-auto-section" id="celebration-ideas">
+
+        <div class="cel-auto-header">
+            <h4 class="cel-auto-subtitle">Celebration Inspiration</h4>
+            <h2 class="cel-auto-title">Ideas For Your Next <br><span class="red-text">Special Event.</span></h2>
+        </div>
+
+
+        <div class="cel-marquee-container">
+            <div class="cel-marquee-track">
+
+
+
+
+                <div class="cel-auto-card">
+                    <img src="./asset/a33.webp" alt="Custom Cakes" class="cel-bg-img">
+                    <div class="cel-dark-overlay"></div>
+                    <div class="cel-hover-content">
+                        <span class="cel-tag">Cake Guide</span>
+                        <h3>How To Order Your Dream Cake</h3>
+                        <p>A complete step-by-step guide to customizing flavors, tiers, and designs for your perfect
+                            celebration.</p>
+                        <a href="404page.html" class="bh-primary-btn cel-btn-small">Read Article</a>
+                    </div>
+                </div>
+
+
+                <div class="cel-auto-card">
+                    <img src="./asset/a46.webp" alt="Birthday Themes" class="cel-bg-img">
+                    <div class="cel-dark-overlay"></div>
+                    <div class="cel-hover-content">
+                        <span class="cel-tag">Birthdays</span>
+                        <h3>Trending Birthday Themes</h3>
+                        <p>Discover the most popular cake designs, vibrant colors, and fun themes for kids and adults
+                            this year.</p>
+                        <a href="404page.html" class="bh-primary-btn cel-btn-small">Read Article</a>
+                    </div>
+                </div>
+
+
+                <div class="cel-auto-card">
+                    <img src="./asset/a44.webp" alt="Wedding Cake" class="cel-bg-img">
+                    <div class="cel-dark-overlay"></div>
+                    <div class="cel-hover-content">
+                        <span class="cel-tag">Weddings</span>
+                        <h3>The Ultimate Wedding Guide</h3>
+                        <p>Everything you need to know about tasting sessions, portion sizing, and choosing floral
+                            arrangements.</p>
+                        <a href="404page.html" class="bh-primary-btn cel-btn-small">Read Article</a>
+                    </div>
+                </div>
+
+
+                <div class="cel-auto-card">
+                    <img src="./asset/a50.webp" alt="Dessert Table" class="cel-bg-img">
+                    <div class="cel-dark-overlay"></div>
+                    <div class="cel-hover-content">
+                        <span class="cel-tag">Parties</span>
+                        <h3>Planning A Dessert Table</h3>
+                        <p>Learn how to mix and match pastries, cupcakes, and mini-desserts to create a stunning party
+                            display.</p>
+                        <a href="404page.html" class="bh-primary-btn cel-btn-small">Read Article</a>
+                    </div>
+                </div>
+
+
+                <div class="cel-auto-card">
+                    <img src="./asset/a48.webp" alt="Gifting Ideas" class="cel-bg-img">
+                    <div class="cel-dark-overlay"></div>
+                    <div class="cel-hover-content">
+                        <span class="cel-tag">Gifting</span>
+                        <h3>Premium Bakery Gifts</h3>
+                        <p>Explore our beautifully packaged dessert boxes and customized hampers perfect for your loved
+                            ones.</p>
+                        <a href="404page.html" class="bh-primary-btn cel-btn-small">Read Article</a>
+                    </div>
+                </div>
+
+
+
+                <div class="cel-auto-card"><img src="./asset/a33.webp" alt="Custom Cakes" class="cel-bg-img">
+                    <div class="cel-dark-overlay"></div>
+                    <div class="cel-hover-content"><span class="cel-tag">Cake Guide</span>
+                        <h3>How To Order Your Dream Cake</h3>
+                        <p>A complete step-by-step guide to customizing flavors, tiers, and designs for your perfect
+                            celebration.</p><a href="404page.html" class="bh-primary-btn cel-btn-small">Read Article</a>
+                    </div>
+                </div>
+                <div class="cel-auto-card"><img src="./asset/a46.webp" alt="Birthday Themes" class="cel-bg-img">
+                    <div class="cel-dark-overlay"></div>
+                    <div class="cel-hover-content"><span class="cel-tag">Birthdays</span>
+                        <h3>Trending Birthday Themes</h3>
+                        <p>Discover the most popular cake designs, vibrant colors, and fun themes for kids and adults
+                            this year.</p><a href="404page.html" class="bh-primary-btn cel-btn-small">Read Article</a>
+                    </div>
+                </div>
+                <div class="cel-auto-card"><img src="./asset/a44.webp" alt="Wedding Cake" class="cel-bg-img">
+                    <div class="cel-dark-overlay"></div>
+                    <div class="cel-hover-content"><span class="cel-tag">Weddings</span>
+                        <h3>The Ultimate Wedding Guide</h3>
+                        <p>Everything you need to know about tasting sessions, portion sizing, and choosing floral
+                            arrangements.</p><a href="404page.html" class="bh-primary-btn cel-btn-small">Read
+                            Article</a>
+                    </div>
+                </div>
+                <div class="cel-auto-card"><img src="./asset/a50.webp" alt="Dessert Table" class="cel-bg-img">
+                    <div class="cel-dark-overlay"></div>
+                    <div class="cel-hover-content"><span class="cel-tag">Parties</span>
+                        <h3>Planning A Dessert Table</h3>
+                        <p>Learn how to mix and match pastries, cupcakes, and mini-desserts to create a stunning party
+                            display.</p><a href="404page.html" class="bh-primary-btn cel-btn-small">Read Article</a>
+                    </div>
+                </div>
+                <div class="cel-auto-card"><img src="./asset/a48.webp" alt="Gifting Ideas" class="cel-bg-img">
+                    <div class="cel-dark-overlay"></div>
+                    <div class="cel-hover-content"><span class="cel-tag">Gifting</span>
+                        <h3>Premium Bakery Gifts</h3>
+                        <p>Explore our beautifully packaged dessert boxes and customized hampers perfect for your loved
+                            ones.</p><a href="404page.html" class="bh-primary-btn cel-btn-small">Read Article</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================
+   Customer Stories Section (Interactive Premium Slider)
+========================================= -->
+    <section class="story-slider-section" id="customer-stories">
+        <div class="story-container">
+
+            <div class="story-header">
+                <h4 class="story-subtitle">Sweet Memories</h4>
+                <h2 class="story-title">Real Moments. <br><span class="red-text">Real Sweetness.</span></h2>
+            </div>
+
+
+            <div class="story-slider-wrapper">
+
+
+                <div class="story-slide active-slide">
+                    <div class="story-slide-img">
+                        <img src="./asset/a41.webp" alt="Birthday Surprise">
+                    </div>
+                    <div class="story-slide-content">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p class="story-quote">"A beautiful custom cake made our daughter's birthday extra special. The
+                            attention to detail, the rich colors, and the flavor were just absolutely perfect!"</p>
+                        <div class="story-meta">
+                            <h3 class="story-name">Birthday Surprise</h3>
+                            <span class="story-client">— Sarah Jenkins</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="story-slide">
+                    <div class="story-slide-img">
+                        <img src="./asset/a40.webp" alt="Wedding Celebration">
+                    </div>
+                    <div class="story-slide-content">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p class="story-quote">"Our wedding cake was not only a stunning centerpiece but also the most
+                            delicious dessert our guests ever had. Thank you for making our day magical!"</p>
+                        <div class="story-meta">
+                            <h3 class="story-name">Wedding Celebration</h3>
+                            <span class="story-client">— Emily & David</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="story-slide">
+                    <div class="story-slide-img">
+                        <img src="./asset/a52.webp" alt="Sweet Gift">
+                    </div>
+                    <div class="story-slide-content">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p class="story-quote">"I sent a premium dessert hamper to my parents for their anniversary. The
+                            packaging was elegant, and it brought a huge smile to their faces!"</p>
+                        <div class="story-meta">
+                            <h3 class="story-name">Sweet Gift</h3>
+                            <span class="story-client">— Michael T.</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="story-controls">
+                    <button class="story-btn" id="story-prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="story-btn" id="story-next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================================
+   Sweet Tips Section (Vertical Timeline)
+========================================= -->
+    <section class="timeline-tips-section" id="sweet-tips">
+        <div class="tl-container">
+
+            <div class="tl-header">
+                <h4 class="tl-subtitle"><i class="fa-solid fa-wand-magic-sparkles"></i> Baking Secrets</h4>
+                <h2 class="tl-title">Little Tips. <br><span class="red-text">Big Baking Magic.</span></h2>
+                <p class="tl-desc">Discover simple baking tips and tricks to make every sweet moment completely
+                    delicious.</p>
+            </div>
+
+
+            <div class="timeline-wrapper">
+
+
+                <div class="timeline-center-line"></div>
+
+
+                <div class="timeline-item left-side">
+                    <div class="timeline-node"><i class="fa-solid fa-droplet"></i></div>
+                    <div class="timeline-card">
+                        <span class="tl-num">01</span>
+                        <div class="tl-img-box">
+                            <img src="./asset/a9.webp" alt="Moist Cake">
+                        </div>
+                        <div class="tl-content">
+                            <h3>How To Keep Cakes Moist</h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> <strong>Storage:</strong> Wrap the cake tightly in
+                                    plastic wrap while still warm.</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Frosting:</strong> Frosting acts as a
+                                    sealant. Cover it quickly.</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Freshness:</strong> Store sliced cakes in
+                                    airtight containers.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item right-side">
+                    <div class="timeline-node"><i class="fa-solid fa-ruler-combined"></i></div>
+                    <div class="timeline-card">
+                        <span class="tl-num">02</span>
+                        <div class="tl-img-box">
+                            <img src="./asset/a5.webp" alt="Cake Size">
+                        </div>
+                        <div class="tl-content">
+                            <h3>Choosing The Right Size</h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> <strong>Small Parties:</strong> A 6-inch cake is
+                                    perfect for 8-10 people.</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Birthdays:</strong> Standard 8-inch cakes
+                                    serve 14-16 guests comfortably.</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Large Events:</strong> Opt for multi-tier
+                                    or large sheet cakes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item left-side">
+                    <div class="timeline-node"><i class="fa-solid fa-fan"></i></div>
+                    <div class="timeline-card">
+                        <span class="tl-num">03</span>
+                        <div class="tl-img-box">
+                            <img src="./asset/a7.webp" alt="Cake Decoration">
+                        </div>
+                        <div class="tl-content">
+                            <h3>Cake Decoration Ideas</h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> <strong>Minimalist:</strong> Smooth buttercream
+                                    with a touch of gold leaf.</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Floral Looks:</strong> Use food-safe
+                                    flowers for a romantic finish.</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Choco Drip:</strong> Add chocolate edges
+                                    and curls for drama.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================
+   Blog Final CTA (Premium Compact Newsletter)
+========================================= -->
+    <section class="blog-cta-section" id="blog-cta">
+
+
+        <img src="./asset/a11.webp" alt="Floating Cupcake" class="bcta-float-img f-top-left">
+        <img src="./asset/a49.webp" alt="Floating Pastry" class="bcta-float-img f-bottom-right">
+
+        <div class="bcta-container">
+
+
+            <div class="bcta-card">
+
+                <div class="bcta-deco-line"></div>
+
+                <div class="bcta-split-layout">
+
+
+                    <div class="bcta-newsletter">
+                        <h4 class="bcta-subtitle"><i class="fa-regular fa-envelope"></i> Stay Inspired, Stay Sweet</h4>
+                        <h2 class="bcta-title">A Little Sweetness <br><span class="red-text">In Your Inbox.</span></h2>
+                        <p class="bcta-desc">Get delicious recipes, baking tips, celebration ideas and bakery updates
+                            straight to your email.</p>
+
+
+                        <form class="bcta-form" id="newsletter-form" novalidate>
+                            <div class="bcta-input-group" id="bcta-input-wrap">
+                                <input type="email" id="email-input" placeholder="Enter Your Email Address" required>
+                                <button type="submit" class="bh-primary-btn bcta-submit-btn">Subscribe Now</button>
+                            </div>
+
+                            <div id="form-status" class="form-msg"></div>
+                        </form>
+                    </div>
+
+                    <div class="bcta-divider"></div>
+
+
+                    <div class="bcta-secondary">
+                        <div class="bcta-sec-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                        <h3>Looking For Your <br>Next Cake?</h3>
+                        <p>Explore our delicious collection and order your favourite treat.</p>
+                        <a href="404page.html" class="bh-outline-btn dark-outline-btn">Order Your Cake</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <div class="footer-logo">
+                    <a href="index.html"><img src="./asset/redlogo.webp" alt="Stackly Logo" class="logo"></a>
+                </div>
+                <p>Baking memories with every bite. Order customized cakes, fresh pastries, and treats.</p>
+                <div class="social-links">
+                    <a href="404page.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Our Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h4>Stackly Delights</h4>
+                <ul>
+                    <li><a href="404page.html">Custom Wedding Cakes</a></li>
+                    <li><a href="404page.html">Birthday Specials</a></li>
+                    <li><a href="404page.html">Cupcakes & Pastries</a></li>
+                    <li><a href="404page.html">Gluten-Free Options</a></li>
+                    <li><a href="404page.html">Online Cake Ordering</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-info" data-aos="fade-up" data-aos-delay="400">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@thestackly.com</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Mon – Sun: 8:00 AM – 9:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly Bakery. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="404page.html">Privacy Policy</a>
+                <a href="404page.html">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+    <script src="script.js"></script>
+
+    <script>
+
+
+
+
+
+        const bhTl = gsap.timeline();
+        bhTl.from(".breadcrumb-card", { opacity: 0, y: -20, duration: 0.6, ease: "power2.out", delay: 0.2 })
+            .from(".bh-featured-label", { opacity: 0, y: 20, duration: 0.6, ease: "power2.out" }, "-=0.3")
+            .from(".bh-title", { opacity: 0, y: 30, duration: 0.8, ease: "power3.out" }, "-=0.4")
+            .from(".bh-desc", { opacity: 0, y: 30, duration: 0.8, ease: "power3.out" }, "-=0.6")
+            .fromTo(".bh-btns a",
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: "power3.out", clearProps: "all" }, "-=0.5"
+            )
+            .from(".bh-image-wrapper", { opacity: 0, x: 50, duration: 1, ease: "power3.out" }, "-=1");
+
+
+        const blogHeroData = [
+            {
+                label: "<i class='fa-solid fa-star'></i> Featured Story",
+                title: "The Sweet Side <br><span class='red-text'>Of Life.</span>",
+                desc: "Discover delicious recipes, baking secrets, cake inspiration and stories from our bakery.",
+                img: "./asset/a12.webp",
+                bg: "./asset/a51.webp"
+            },
+            {
+                label: "<i class='fa-solid fa-book-open'></i> Baking Secrets",
+                title: "Mastering The <br><span class='red-text'>Perfect Crust.</span>",
+                desc: "Learn the hidden techniques our master bakers use to get that flaky, golden perfection every time.",
+                img: "./asset/a8.webp",
+                bg: "./asset/a19.webp"
+            }
+        ];
+
+        const bLabel = document.getElementById("bh-dyn-label");
+        const bTitle = document.getElementById("bh-dyn-title");
+        const bDesc = document.getElementById("bh-dyn-desc");
+        const bImg = document.getElementById("bh-dyn-img");
+        const bBg = document.getElementById("bh-bg-img");
+
+        let currentBlogSlide = 0;
+
+        if (bTitle && bImg && bBg) {
+            setInterval(() => {
+                let nextBlog = (currentBlogSlide + 1) % blogHeroData.length;
+
+
+                gsap.to([bLabel, bTitle, bDesc, bImg, bBg], {
+                    opacity: 0, duration: 0.5,
+                    onComplete: () => {
+                        bLabel.innerHTML = blogHeroData[nextBlog].label;
+                        bTitle.innerHTML = blogHeroData[nextBlog].title;
+                        bDesc.innerHTML = blogHeroData[nextBlog].desc;
+                        bImg.src = blogHeroData[nextBlog].img;
+                        bBg.style.backgroundImage = `url('${blogHeroData[nextBlog].bg}')`;
+
+                        gsap.to([bLabel, bTitle, bDesc, bImg, bBg], {
+                            opacity: 1, duration: 0.8, ease: "power2.out"
+                        });
+                    }
+                });
+                currentBlogSlide = nextBlog;
+            }, 7000); 
+        }
+
+
+
+
+
+
+        gsap.from(".blog-cat-header", {
+            scrollTrigger: {
+                trigger: ".blog-cat-section",
+                start: "top 80%"
+            },
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            ease: "power3.out"
+        });
+
+        gsap.from(".cat-marquee-wrapper", {
+            scrollTrigger: {
+                trigger: ".blog-cat-section",
+                start: "top 75%"
+            },
+            opacity: 0,
+            duration: 1.5,
+            ease: "power2.out",
+            delay: 0.2
+        });
+
+
+
+
+
+
+
+        gsap.from(".bc-main-header", {
+            scrollTrigger: { trigger: ".baker-corner-section", start: "top 80%" },
+            opacity: 0, y: 30, duration: 1, ease: "power3.out"
+        });
+
+        const bcSteps = document.querySelectorAll(".bc-step");
+        const bcImages = document.querySelectorAll(".bc-img");
+
+        if (bcSteps.length > 0 && window.innerWidth > 992) {
+
+            bcSteps.forEach((step, i) => {
+
+
+                gsap.from(step.querySelector(".bc-content-box"), {
+                    scrollTrigger: {
+                        trigger: step,
+                        start: "top 85%",
+                    },
+                    opacity: 0,
+                    y: 40,
+                    duration: 0.8,
+                    ease: "power3.out"
+                });
+
+
+                ScrollTrigger.create({
+                    trigger: step,
+                    start: "top 50%", 
+                    end: "bottom 50%",
+                    onEnter: () => activateBakerStep(i),
+                    onEnterBack: () => activateBakerStep(i)
+                });
+            });
+
+            function activateBakerStep(index) {
+
+                bcSteps.forEach(s => s.classList.remove("active-step"));
+                bcSteps[index].classList.add("active-step");
+
+
+                bcImages.forEach(img => img.classList.remove("active-bc-img"));
+                bcImages[index].classList.add("active-bc-img");
+            }
+
+
+            activateBakerStep(0);
+        }
+
+
+
+
+
+
+
+        gsap.from(".rs-header", {
+            scrollTrigger: { trigger: ".recipe-spotlight-section", start: "top 80%" },
+            opacity: 0, y: 30, duration: 1, ease: "power3.out"
+        });
+
+
+        gsap.from(".rs-item", {
+            scrollTrigger: { trigger: ".rs-accordion-wrapper", start: "top 75%" },
+            opacity: 0, y: 30, duration: 0.8, stagger: 0.15, ease: "power3.out"
+        });
+
+
+        const recipeItems = document.querySelectorAll(".rs-head");
+
+        recipeItems.forEach(header => {
+            header.addEventListener("click", () => {
+                const parentItem = header.parentElement;
+
+
+                if (parentItem.classList.contains("active-rs")) {
+                    parentItem.classList.remove("active-rs");
+                } else {
+
+                    document.querySelectorAll(".rs-item").forEach(item => {
+                        item.classList.remove("active-rs");
+                    });
+
+                    parentItem.classList.add("active-rs");
+                }
+            });
+        });
+
+
+
+
+
+
+        gsap.from(".cel-auto-header", {
+            scrollTrigger: {
+                trigger: ".cel-auto-section",
+                start: "top 80%"
+            },
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            ease: "power3.out"
+        });
+
+        gsap.from(".cel-marquee-container", {
+            scrollTrigger: {
+                trigger: ".cel-auto-section",
+                start: "top 75%"
+            },
+            opacity: 0,
+            duration: 1.5,
+            ease: "power2.out",
+            delay: 0.2
+        });
+
+
+
+
+
+
+        gsap.from(".story-header", {
+            scrollTrigger: { trigger: ".story-slider-section", start: "top 80%" },
+            opacity: 0, y: 30, duration: 1, ease: "power3.out"
+        });
+
+        gsap.from(".story-slider-wrapper", {
+            scrollTrigger: { trigger: ".story-slider-section", start: "top 75%" },
+            opacity: 0, y: 50, duration: 1.2, ease: "power3.out", delay: 0.2
+        });
+
+
+        const storySlides = document.querySelectorAll(".story-slide");
+        const prevBtn = document.getElementById("story-prev");
+        const nextBtn = document.getElementById("story-next");
+        let currentStory = 0;
+
+        if (storySlides.length > 0 && prevBtn && nextBtn) {
+
+            function updateStorySlider(newIndex) {
+
+                storySlides.forEach(slide => {
+                    slide.classList.remove("active-slide");
+                    slide.classList.remove("exit-slide");
+                });
+
+
+                storySlides[currentStory].classList.add("exit-slide");
+
+
+                currentStory = newIndex;
+
+
+                storySlides[currentStory].classList.add("active-slide");
+                storySlides[currentStory].classList.remove("exit-slide");
+            }
+
+            nextBtn.addEventListener("click", () => {
+                let nextIndex = (currentStory + 1) % storySlides.length;
+                updateStorySlider(nextIndex);
+            });
+
+            prevBtn.addEventListener("click", () => {
+                let prevIndex = (currentStory - 1 + storySlides.length) % storySlides.length;
+                updateStorySlider(prevIndex);
+            });
+        }
+
+
+
+
+
+
+
+        gsap.from(".tl-header", {
+            scrollTrigger: { trigger: ".timeline-tips-section", start: "top 80%" },
+            opacity: 0, y: 30, duration: 1, ease: "power3.out"
+        });
+
+
+        gsap.to(".timeline-center-line::after", {
+            scrollTrigger: {
+                trigger: ".timeline-wrapper",
+                start: "top 60%",
+                end: "bottom 60%",
+                scrub: 1 
+            },
+            height: "100%", 
+            ease: "none"
+        });
+
+
+        const tlItems = document.querySelectorAll(".timeline-item");
+
+        tlItems.forEach((item, index) => {
+            let xOffset = item.classList.contains("left-side") ? -50 : 50; 
+
+
+            if (window.innerWidth <= 992) {
+                xOffset = 50;
+            }
+
+            gsap.from(item, {
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top 80%"
+                },
+                opacity: 0,
+                x: xOffset,
+                duration: 0.8,
+                ease: "power3.out"
+            });
+
+
+            gsap.from(item.querySelector(".timeline-node"), {
+                scrollTrigger: { trigger: item, start: "top 80%" },
+                scale: 0,
+                duration: 0.5,
+                ease: "back.out(2)",
+                delay: 0.4
+            });
+        });
+
+
+
+
+
+
+        const newsletterForm = document.getElementById("newsletter-form");
+        const emailInput = document.getElementById("email-input");
+        const formStatus = document.getElementById("form-status");
+        const inputWrap = document.getElementById("bcta-input-wrap");
+
+        if (newsletterForm) {
+            newsletterForm.addEventListener("submit", function (e) {
+                e.preventDefault(); 
+
+                const emailValue = emailInput.value.trim();
+
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+                formStatus.className = "form-msg";
+                inputWrap.classList.remove("error-border", "success-border");
+
+
+                if (emailValue === "") {
+
+                    formStatus.innerHTML = "<i class='fa-solid fa-circle-exclamation'></i> Please enter your email address.";
+                    formStatus.classList.add("show-error");
+                    inputWrap.classList.add("error-border");
+                }
+                else if (!emailPattern.test(emailValue)) {
+
+                    formStatus.innerHTML = "<i class='fa-solid fa-triangle-exclamation'></i> Please enter a valid email address.";
+                    formStatus.classList.add("show-error");
+                    inputWrap.classList.add("error-border");
+                }
+                else {
+                    window.location.href = '404page.html'
+
+
+                    emailInput.value = "";
+
+
+                    setTimeout(() => {
+                        formStatus.className = "form-msg";
+                        inputWrap.classList.remove("success-border");
+                    }, 4000);
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>

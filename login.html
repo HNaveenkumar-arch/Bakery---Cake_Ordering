@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Sweet Crumbs Bakery</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        :root {
+            --primary-red: #de3545;
+            --dark-text: #111111;
+            --gray-text: #666666;
+            --bg-cream: #fcf9f5;
+            --error-red: #e74c3c;
+            --input-border: #e0d8d0;
+
+            --font-title: 'Playfair Display', serif;
+            --font-text: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-text);
+            background-color: var(--bg-cream);
+            color: var(--dark-text);
+            min-height: 100vh;
+            display: flex;
+            overflow-x: hidden;
+        }
+
+        .login-section {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+        }
+
+
+        .login-left {
+            flex: 1.2;
+            position: relative;
+            background: url('./asset/a17.webp') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .login-left::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+
+
+        .back-home {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #111;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            padding: 12px 25px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            z-index: 5;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-home:hover {
+            background: var(--primary-red);
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(222, 53, 69, 0.4);
+        }
+
+
+        .left-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            text-align: center;
+            animation: floatUpDown 4s ease-in-out infinite;
+        }
+
+        @keyframes floatUpDown {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .left-content h2 {
+            font-family: var(--font-title);
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .left-content p {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 450px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+
+        .login-right {
+            flex: 1;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 5%;
+            position: relative;
+        }
+
+        .form-wrapper {
+            width: 100%;
+            max-width: 420px;
+        }
+
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .temp-logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary-red);
+            margin-bottom: 10px;
+            display: inline-block;
+            font-family: var(--font-title);
+        }
+
+        .temp-logo i {
+            margin-right: 5px;
+        }
+
+        .form-header h3 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #111;
+        }
+
+        .form-header p {
+            font-size: 14px;
+            color: var(--gray-text);
+        }
+
+
+        .input-group {
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        .input-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .input-wrapper i.left-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .input-wrapper select,
+        .input-wrapper input {
+            width: 100%;
+            padding: 15px 20px 15px 48px;
+            border: 2px solid var(--input-border);
+            border-radius: 12px;
+            font-size: 14px;
+            font-family: var(--font-text);
+            color: var(--dark-text);
+            background: #fafafa;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .input-wrapper select {
+            appearance: none;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23de3545' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            background-size: 16px;
+        }
+
+        .input-wrapper input:focus,
+        .input-wrapper select:focus {
+            border-color: var(--primary-red);
+            background: #ffffff;
+            box-shadow: 0 5px 15px rgba(222, 53, 69, 0.1);
+        }
+
+        .input-wrapper input:focus~i.left-icon,
+        .input-wrapper select:focus~i.left-icon {
+            color: var(--primary-red);
+        }
+
+        input[type="password"]::-ms-reveal,
+        input[type="password"]::-ms-clear {
+            display: none !important;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+            cursor: pointer;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .toggle-password:hover {
+            color: var(--primary-red);
+        }
+
+
+        .error-message {
+            color: var(--error-red);
+            font-size: 12px;
+            margin-top: 6px;
+            margin-left: 5px;
+            font-weight: 500;
+            display: none;
+        }
+
+        .input-group.error .input-wrapper input,
+        .input-group.error .input-wrapper select {
+            border-color: var(--error-red);
+            background: #fff5f5;
+            animation: shake 0.4s ease-in-out;
+        }
+
+        .input-group.error .error-message {
+            display: block;
+        }
+
+        .input-group.error .input-wrapper i.left-icon {
+            color: var(--error-red);
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25%,
+            75% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+        }
+
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 13px;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gray-text);
+            cursor: pointer;
+        }
+
+        .remember input {
+            accent-color: var(--primary-red);
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .forgot-link {
+            color: var(--gray-text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .forgot-link:hover {
+            color: var(--primary-red);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--primary-red);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-family: var(--font-text);
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 20px rgba(222, 53, 69, 0.2);
+        }
+
+        .submit-btn:hover {
+            background-color: #c82333;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(222, 53, 69, 0.3);
+        }
+
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 30px 0 25px;
+            color: #aaa;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #eee;
+        }
+
+        .divider:not(:empty)::before {
+            margin-right: 15px;
+        }
+
+        .divider:not(:empty)::after {
+            margin-left: 15px;
+        }
+
+        .social-logins {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: var(--gray-text);
+        }
+
+        .signup-link a {
+            color: var(--primary-red);
+            font-weight: 700;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 992px) {
+            .login-left {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                padding: 20px;
+                align-items: flex-start;
+            }
+
+            .left-content {
+                display: none;
+            }
+
+            .back-home {
+                top: 20px;
+                left: 20px;
+                padding: 10px 20px;
+                font-size: 13px;
+            }
+
+            .login-right {
+                background: transparent;
+                z-index: 2;
+                padding: 100px 5% 40px;
+                min-height: 100vh;
+                align-items: center;
+            }
+
+            .form-wrapper {
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                padding: 40px 30px;
+                border-radius: 20px;
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .form-wrapper {
+                padding: 35px 20px;
+            }
+
+            .form-header h3 {
+                font-size: 24px;
+            }
+
+            .back-home {
+                background: rgba(255, 255, 255, 0.9);
+            }
+        }
+
+        .logo {
+            width: 140px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-section">
+
+
+        <div class="login-left gs-left">
+
+
+            <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+
+            <div class="left-content">
+                <h2>Freshly Baked <br>Happiness Awaits.</h2>
+                <p>Log in to track your custom orders, save favorite recipes, and manage your sweet deliveries.</p>
+            </div>
+        </div>
+
+
+        <div class="login-right gs-right">
+
+            <div class="form-wrapper">
+
+                <div class="form-header">
+                    <a href="index.html"><img src="./asset/redlogo.webp" alt="logo" class="logo"></a>
+                    <h3>Welcome Back</h3>
+                    <p>Enter your details to access your account</p>
+                </div>
+
+                <form id="bakeryLoginForm" novalidate>
+
+
+                    <div class="input-group" id="roleGroup">
+                        <div class="input-wrapper">
+                            <i class="fas fa-user-tag left-icon"></i>
+                            <select id="role">
+                                <option value="" disabled selected>Select Your Account Type</option>
+                                <option value="customer">Customer (Order & Track Cakes)</option>
+                                <option value="admin">Bakery Staff (Manage Orders)</option>
+                            </select>
+                        </div>
+                        <div class="error-message" id="roleError">Please select your account type.</div>
+                    </div>
+
+
+                    <div class="input-group" id="emailGroup">
+                        <div class="input-wrapper">
+                            <i class="far fa-envelope left-icon"></i>
+                            <input type="email" id="email" placeholder="Email Address" autocomplete="off">
+                        </div>
+                        <div class="error-message" id="emailError">Please enter a valid email address.</div>
+                    </div>
+
+
+                    <div class="input-group" id="passwordGroup">
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock left-icon"></i>
+                            <input type="password" id="password" placeholder="Password (Min 6 chars)">
+                            <i class="far fa-eye toggle-password" id="togglePassword"></i>
+                        </div>
+                        <div class="error-message" id="passwordError">Password must be at least 6 characters.</div>
+                    </div>
+
+
+                    <div class="form-options">
+                        <label class="remember">
+                            <input type="checkbox"> Remember Me
+                        </label>
+                        <a href="404page.html" class="forgot-link">Forgot Password?</a>
+                    </div>
+
+
+                    <button type="submit" class="submit-btn">
+                        <span>Sign In</span> <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <div class="divider">Or Continue With</div>
+
+                <div class="social-logins">
+                    <a href="404page.html" class="social-btn"><i class="fab fa-google"></i></a>
+                    <a href="404page.html" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="404page.html" class="social-btn"><i class="fab fa-apple"></i></a>
+
+                </div>
+
+                <div class="signup-link">
+                    Don't have an account? <a href="signup.html">Sign Up Now</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            const isMobile = window.innerWidth <= 992;
+
+            if (!isMobile) {
+
+                gsap.fromTo(".gs-left",
+                    { opacity: 0, x: -50 },
+                    { opacity: 1, x: 0, duration: 1, ease: "power3.out" }
+                );
+                gsap.fromTo(".gs-right",
+                    { opacity: 0, x: 50 },
+                    { opacity: 1, x: 0, duration: 1, ease: "power3.out", delay: 0.2 }
+                );
+            } else {
+
+                gsap.fromTo(".form-wrapper",
+                    { opacity: 0, y: 30 },
+                    { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: 0.2 }
+                );
+            }
+
+
+            gsap.fromTo(".form-wrapper > *",
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: "power2.out", delay: 0.5, clearProps: "all" }
+            );
+
+
+            const loginForm = document.getElementById("bakeryLoginForm");
+            const roleInput = document.getElementById("role");
+            const emailInput = document.getElementById("email");
+            const passwordInput = document.getElementById("password");
+
+            const roleGroup = document.getElementById("roleGroup");
+            const emailGroup = document.getElementById("emailGroup");
+            const passwordGroup = document.getElementById("passwordGroup");
+
+
+            const togglePassword = document.getElementById("togglePassword");
+            if (togglePassword) {
+                togglePassword.addEventListener("click", function () {
+                    const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+                    passwordInput.setAttribute("type", type);
+                    this.classList.toggle("fa-eye");
+                    this.classList.toggle("fa-eye-slash");
+                });
+            }
+
+
+            if (roleInput) roleInput.addEventListener("change", () => roleGroup.classList.remove("error"));
+            if (emailInput) emailInput.addEventListener("input", () => emailGroup.classList.remove("error"));
+            if (passwordInput) passwordInput.addEventListener("input", () => passwordGroup.classList.remove("error"));
+
+
+            if (loginForm) {
+                loginForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    let isValid = true;
+
+
+                    if (roleInput.value === "") {
+                        roleGroup.classList.add("error");
+                        isValid = false;
+                    }
+
+
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(emailInput.value.trim())) {
+                        emailGroup.classList.add("error");
+                        isValid = false;
+                    }
+
+
+                    if (passwordInput.value.trim().length < 6) {
+                        passwordGroup.classList.add("error");
+                        isValid = false;
+                    }
+
+
+                    if (isValid) {
+
+                        sessionStorage.setItem('userEmail', emailInput.value.trim());
+
+                        const btn = document.querySelector(".submit-btn");
+                        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Authenticating...</span>';
+                        btn.style.opacity = "0.8";
+                        btn.style.pointerEvents = "none";
+
+                        const selectedRole = roleInput.value;
+
+
+                        setTimeout(() => {
+                            if (selectedRole === "customer") {
+                                window.location.href = "customer_data.html";
+                            } else if (selectedRole === "admin") {
+                                window.location.href = "bakery_staff_data.html";
+                            }
+                        }, 1500);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

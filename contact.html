@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Bakery & Cake Ordering</title>
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+
+    <div class="loader-wrapper" id="preloader">
+        <div class="loader"></div>
+        <p>Stackly Bakery...</p>
+    </div>
+
+
+    <header class="navbar" id="navbar">
+        <a href="index.html" class="logo-link" data-aos="fade-right">
+            <img src="./asset/redlogo.webp" alt="Stackly Logo" class="logo">
+        </a>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-menu" id="nav-menu">
+            <ul class="nav-links">
+                <li data-aos="fade-up" data-aos-delay="100"><a href="index.html">Home</a></li>
+                <li data-aos="fade-up" data-aos-delay="200"><a href="about.html">About</a></li>
+                <li data-aos="fade-up" data-aos-delay="300"><a href="service.html">Service</a></li>
+                <li data-aos="fade-up" data-aos-delay="400"><a href="blog.html">Blog</a></li>
+                <li data-aos="fade-up" data-aos-delay="500"><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-buttons" data-aos="fade-up" data-aos-delay="600">
+                <a href="login.html" class="btn login-btn">Login</a>
+                <a href="signup.html" class="btn signup-btn">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- =========================================
+   Contact Hero Section (Full Code)
+========================================= -->
+    <section class="contact-hero-section" id="contact-hero">
+
+
+        <div class="ch-bg" style="background-image: url('./asset/a4.webp');">
+        </div>
+
+
+        <div class="ch-overlay"></div>
+
+        <div class="ch-container">
+
+
+            <div class="ch-left">
+
+
+                <div class="ch-breadcrumb-card">
+                    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                    <i class="fa-solid fa-angles-right divider"></i>
+                    <span class="current">Contact</span>
+                </div>
+
+
+                <div class="ch-badge">
+                    <i class="fa-solid fa-heart"></i> Freshly Baked With Love
+                </div>
+
+                <h1 class="ch-title">We’d Love To Hear <br><span class="red-text">From You.</span></h1>
+
+
+                <div class="ch-deco-line"></div>
+
+                <p class="ch-desc">Have a question about our cakes, need a custom order or planning a special
+                    celebration? Our bakery team is here to help you make it sweet.</p>
+
+
+                <a href="404page.html" class="ch-btn-force">Talk To Our Bakery</a>
+
+            </div>
+
+
+            <div class="ch-right">
+                <div class="ch-image-frame">
+                    <img src="./asset/a45.webp" alt="Premium Cake" class="ch-main-img" id="ch-dynamic-img">
+
+                    <div class="ch-floating-element">
+                        <img src="./asset/a14.webp" alt="Cupcake">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================================
+   Contact Form Section (Enhanced & Balanced)
+========================================= -->
+    <section class="contact-form-section" id="contact-form">
+
+
+
+
+        <div class="cf-container">
+
+
+            <div class="cf-left">
+                <h4 class="cf-subtitle"><i class="fa-solid fa-envelope-open-text"></i> Let’s Bake Your Ideas</h4>
+                <h2 class="cf-title">Have A Sweet <br><span class="red-text">Question?</span></h2>
+                <p class="cf-desc">Whether you're looking for a birthday cake, custom design or event order, send us a
+                    message and our team will get back to you shortly.</p>
+
+                <div class="cf-highlights">
+                    <div class="cf-hi-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Custom Cake Enquiries</span>
+                    </div>
+                    <div class="cf-hi-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Bulk & Event Orders</span>
+                    </div>
+                    <div class="cf-hi-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Cake Availability</span>
+                    </div>
+                    <div class="cf-hi-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Delivery Questions</span>
+                    </div>
+                </div>
+
+
+                <div class="cf-left-image-card">
+                    <img src="./asset/a36.webp" alt="Bakery Fresh">
+                    <div class="cf-img-badge">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>100% Fresh & Handcrafted</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cf-right">
+                <div class="cf-form-box">
+
+                    <h3>Send Us A Message</h3>
+
+                    <form id="bakery-contact-form" novalidate>
+
+
+                        <div class="cf-input-group" id="group-name">
+                            <label for="cf-name">Full Name</label>
+                            <input type="text" id="cf-name" placeholder="Enter your full name">
+                            <span class="cf-error-text" id="err-name">Please enter a valid name (letters only, no
+                                numbers).</span>
+                        </div>
+
+
+                        <div class="cf-input-group" id="group-email">
+                            <label for="cf-email">Email Address</label>
+                            <input type="email" id="cf-email" placeholder="Enter your email">
+                            <span class="cf-error-text" id="err-email">Please enter a valid email address.</span>
+                        </div>
+
+
+                        <div class="cf-input-group" id="group-phone">
+                            <label for="cf-phone">Phone Number</label>
+                            <input type="tel" id="cf-phone" placeholder="Enter 10-digit mobile number" maxlength="10">
+                            <span class="cf-error-text" id="err-phone">Phone number must be exactly 10 digits (numbers
+                                only).</span>
+                        </div>
+
+
+                        <div class="cf-input-group" id="group-enquiry">
+                            <label for="cf-enquiry">Select Enquiry Type</label>
+                            <select id="cf-enquiry">
+                                <option value="" disabled selected>Choose an enquiry type</option>
+                                <option value="Cake Ordering">Cake Ordering</option>
+                                <option value="Custom Cake">Custom Cake</option>
+                                <option value="Event Catering">Event Catering</option>
+                                <option value="Delivery">Delivery</option>
+                                <option value="General Enquiry">General Enquiry</option>
+                            </select>
+                            <span class="cf-error-text" id="err-enquiry">Please select an enquiry type.</span>
+                        </div>
+
+
+                        <div class="cf-input-group" id="group-date">
+                            <label for="cf-date">Preferred Delivery Date</label>
+                            <input type="date" id="cf-date">
+                            <span class="cf-error-text" id="err-date">Please select a delivery date.</span>
+                        </div>
+
+
+                        <div class="cf-input-group" id="group-msg">
+                            <label for="cf-msg">Your Message</label>
+                            <textarea id="cf-msg" rows="4"
+                                placeholder="Write your message (minimum 10 characters)"></textarea>
+                            <span class="cf-error-text" id="err-msg">Message must be at least 10 characters long.</span>
+                        </div>
+
+
+                        <button type="submit" class="cf-submit-btn">Send Enquiry </button>
+
+
+                        <div id="cf-success-msg" class="cf-success-banner">
+                            <i class="fa-solid fa-circle-check"></i> Thank you! Your enquiry has been sent successfully.
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================================
+   Contact Info Section (Fixed Blank Box Issue)
+========================================= -->
+    <section class="contact-info-section" id="contact-info">
+
+
+        <div class="ci-texture-bg"></div>
+
+        <div class="ci-container">
+
+
+            <div class="ci-header">
+                <h4 class="ci-subtitle"><i class="fa-solid fa-mug-hot"></i> We’re Here For Your Sweet Moments</h4>
+                <h2 class="ci-title">Reach Out. We’ll Take Care <br><span class="red-text">Of The Rest.</span></h2>
+            </div>
+
+
+            <div class="ci-showcase-panel">
+
+
+                <div class="ci-moving-line-container">
+                    <div class="ci-moving-line"></div>
+                </div>
+
+
+                <div class="ci-item">
+                    <div class="ci-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                    <h3>Visit Our Bakery</h3>
+                    <h4>Sweet Crumbs</h4>
+                    <p>123 Bakery Street,<br>Your City, India</p>
+                    <a href="404page.html" class="ci-link">Directions <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+
+                <div class="ci-item">
+                    <div class="ci-icon-box"><i class="fa-solid fa-phone"></i></div>
+                    <h3>Call Us</h3>
+                    <h4>+91 98765 43210</h4>
+                    <p>For cake orders and<br>custom enquiries.</p>
+                    <a href="404page.html" class="ci-link">Call Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+
+                <div class="ci-item">
+                    <div class="ci-icon-box"><i class="fa-solid fa-envelope"></i></div>
+                    <h3>Email Us</h3>
+                    <h4>info@thestackly.com</h4>
+                    <p>Send your questions and<br>order details.</p>
+                    <a href="404page.html" class="ci-link">Send Email <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+
+                <div class="ci-item">
+                    <div class="ci-icon-box"><i class="fa-regular fa-clock"></i></div>
+                    <h3>Opening Hours</h3>
+                    <h4>Mon – Sun</h4>
+                    <p>9:00 AM – 9:00 PM<br>Freshly baked daily.</p>
+                    <span class="ci-link no-hover"><i class="fa-solid fa-door-open"></i> Open Today</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================================
+   Map Section (Find Your Way To Us)
+========================================= -->
+    <section class="map-section" id="location-map">
+        <div class="map-container">
+
+
+            <div class="map-left">
+                <div class="map-wrapper">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.001696423075!2d77.59127971527014!3d12.971598790855866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="sl-iframe">
+                    </iframe>
+                </div>
+            </div>
+
+
+            <div class="map-right">
+                <div class="map-info-card">
+                    <h4 class="map-subtitle"><i class="fa-solid fa-map-location-dot"></i> Find Your Way To Something
+                        Sweet</h4>
+                    <h2 class="map-title">Come Say <span class="red-text">Hello!</span></h2>
+                    <p class="map-desc">Visit our bakery, explore our freshly baked treats and experience the warmth
+                        behind every delicious creation.</p>
+
+                    <div class="map-details-list">
+
+                        <div class="md-item">
+                            <div class="md-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="md-text">
+                                <h3>Sweet Crumbs Bakery</h3>
+                                <p>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil,
+                                    Salem</p>
+                            </div>
+                        </div>
+
+
+                        <div class="md-item">
+                            <div class="md-icon"><i class="fa-regular fa-clock"></i></div>
+                            <div class="md-text">
+                                <h3>Open Daily</h3>
+                                <p>9:00 AM – 9:00 PM</p>
+                            </div>
+                        </div>
+
+
+                        <div class="md-item">
+                            <div class="md-icon"><i class="fa-solid fa-car"></i></div>
+                            <div class="md-text">
+                                <h3>Parking Available</h3>
+                                <p>Convenient parking for bakery visitors.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================================
+   Final CTA Section (Clear Image & Card Type)
+========================================= -->
+    <section class="final-cta-section" id="final-cta">
+
+
+        <div class="fcta-bg" style="background-image: url('./asset/a17.webp');">
+        </div>
+
+
+        <div class="fcta-overlay"></div>
+
+
+        <div class="fcta-container">
+
+
+            <div class="fcta-card">
+
+
+                <img src="./asset/a37.webp" alt="Cupcake" class="fcta-float fcta-left-img">
+                <img src="./asset/a21.webp" alt="Pastry" class="fcta-float fcta-right-img">
+
+                <h4 class="fcta-subtitle"><i class="fa-solid fa-cake-candles"></i> Your Sweetest Order Is Just A Message
+                    Away</h4>
+
+                <h2 class="fcta-title">Let’s Make Your Next <br><span class="red-text">Celebration Delicious.</span>
+                </h2>
+
+
+                <div class="fcta-deco-line"></div>
+
+                <p class="fcta-desc">From custom birthday cakes to beautiful dessert boxes, we’re ready to make your
+                    sweet moments absolutely special.</p>
+
+
+                <div class="fcta-btn-group">
+                    <a href="404page.html" class="fcta-primary-btn">Order Your Cake <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                    <a href="404page.html" class="fcta-outline-btn">Contact Our Bakery</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <div class="footer-logo">
+                    <a href="index.html"><img src="./asset/redlogo.webp" alt="Stackly Logo" class="logo"></a>
+                </div>
+                <p>Baking memories with every bite. Order customized cakes, fresh pastries, and treats.</p>
+                <div class="social-links">
+                    <a href="404page.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Our Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h4>Stackly Delights</h4>
+                <ul>
+                    <li><a href="404page.html">Custom Wedding Cakes</a></li>
+                    <li><a href="404page.html">Birthday Specials</a></li>
+                    <li><a href="404page.html">Cupcakes & Pastries</a></li>
+                    <li><a href="404page.html">Gluten-Free Options</a></li>
+                    <li><a href="404page.html">Online Cake Ordering</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-info" data-aos="fade-up" data-aos-delay="400">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@thestackly.com</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Mon – Sun: 8:00 AM – 9:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly Bakery. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="404page.html">Privacy Policy</a>
+                <a href="404page.html">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+    <script src="script.js"></script>
+
+    <script>
+
+
+
+
+
+        const chTl = gsap.timeline();
+        chTl.from(".ch-breadcrumb-card", { opacity: 0, y: -20, duration: 0.6, ease: "power2.out", delay: 0.2 })
+            .from(".ch-badge", { opacity: 0, y: 20, duration: 0.6, ease: "power2.out" }, "-=0.3")
+            .from(".ch-title", { opacity: 0, y: 30, duration: 0.8, ease: "power3.out" }, "-=0.4")
+            .from(".ch-deco-line", { opacity: 0, width: 0, duration: 0.6, ease: "power2.out" }, "-=0.5")
+            .from(".ch-desc", { opacity: 0, y: 30, duration: 0.8, ease: "power3.out" }, "-=0.6")
+            .fromTo(".ch-btn-force",
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", clearProps: "all" }, "-=0.5"
+            )
+            .from(".ch-image-frame", { opacity: 0, x: 50, duration: 1, ease: "power3.out" }, "-=1");
+
+
+        const contactImages = [
+            "./asset/a9.webp",
+            "./asset/a33.webp",
+            "./asset/a43.webp"
+        ];
+
+        const chDynamicImg = document.getElementById("ch-dynamic-img");
+        let chCurrentImgIndex = 0;
+
+        if (chDynamicImg) {
+            setInterval(() => {
+                chCurrentImgIndex = (chCurrentImgIndex + 1) % contactImages.length;
+
+                gsap.to(chDynamicImg, {
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power2.inOut",
+                    onComplete: () => {
+                        chDynamicImg.src = contactImages[chCurrentImgIndex];
+                        gsap.to(chDynamicImg, {
+                            opacity: 1,
+                            duration: 1,
+                            ease: "power2.inOut"
+                        });
+                    }
+                });
+            }, 6000);
+        }
+
+
+
+
+
+
+        gsap.from(".cf-left", {
+            scrollTrigger: { trigger: ".contact-form-section", start: "top 75%" },
+            opacity: 0, x: -40, duration: 1, ease: "power3.out"
+        });
+
+        gsap.from(".cf-right", {
+            scrollTrigger: { trigger: ".contact-form-section", start: "top 75%" },
+            opacity: 0, x: 40, duration: 1, ease: "power3.out", delay: 0.2
+        });
+
+        const contactForm = document.getElementById("bakery-contact-form");
+
+        if (contactForm) {
+            const nameInput = document.getElementById("cf-name");
+            const emailInput = document.getElementById("cf-email");
+            const phoneInput = document.getElementById("cf-phone");
+            const enquirySelect = document.getElementById("cf-enquiry");
+            const dateInput = document.getElementById("cf-date");
+            const msgInput = document.getElementById("cf-msg");
+            const successBanner = document.getElementById("cf-success-msg");
+
+
+            nameInput.addEventListener("input", function () {
+
+                this.value = this.value.replace(/[0-9]/g, '');
+                document.getElementById("group-name").classList.remove("error");
+            });
+
+
+            phoneInput.addEventListener("input", function () {
+
+                this.value = this.value.replace(/[^0-9]/g, '');
+                if (this.value.length > 10) {
+                    this.value = this.value.slice(0, 10);
+                }
+                document.getElementById("group-phone").classList.remove("error");
+            });
+
+
+            [emailInput, enquirySelect, dateInput, msgInput].forEach(element => {
+                element.addEventListener("input", function () {
+                    this.closest(".cf-input-group").classList.remove("error");
+                });
+                element.addEventListener("change", function () {
+                    this.closest(".cf-input-group").classList.remove("error");
+                });
+            });
+
+
+            contactForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                let isValid = true;
+
+
+                const nameVal = nameInput.value.trim();
+                const nameGroup = document.getElementById("group-name");
+                if (nameVal === "" || nameVal.length < 2) {
+                    nameGroup.classList.add("error");
+                    isValid = false;
+                }
+
+
+                const emailVal = emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                const emailGroup = document.getElementById("group-email");
+                if (emailVal === "" || !emailRegex.test(emailVal)) {
+                    emailGroup.classList.add("error");
+                    isValid = false;
+                }
+
+
+                const phoneVal = phoneInput.value.trim();
+                const phoneGroup = document.getElementById("group-phone");
+                if (phoneVal.length !== 10) {
+                    phoneGroup.classList.add("error");
+                    isValid = false;
+                }
+
+
+                const enquiryGroup = document.getElementById("group-enquiry");
+                if (enquirySelect.value === "") {
+                    enquiryGroup.classList.add("error");
+                    isValid = false;
+                }
+
+
+                const dateGroup = document.getElementById("group-date");
+                if (dateInput.value === "") {
+                    dateGroup.classList.add("error");
+                    isValid = false;
+                }
+
+
+                const msgVal = msgInput.value.trim();
+                const msgGroup = document.getElementById("group-msg");
+                if (msgVal.length < 10) {
+                    msgGroup.classList.add("error");
+                    isValid = false;
+                }
+
+
+                if (isValid) {
+                    successBanner.classList.add("show");
+                    window.location.href = '404page.html'
+                    contactForm.reset();
+                    setTimeout(() => {
+                        successBanner.classList.remove("show");
+                    }, 5000);
+                } else {
+                    successBanner.classList.remove("show");
+                }
+            });
+        }
+
+
+
+
+
+
+        gsap.fromTo(".ci-header",
+            { opacity: 0, y: 30 },
+            { scrollTrigger: { trigger: ".contact-info-section", start: "top 80%" }, opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+        );
+
+
+        gsap.fromTo(".ci-showcase-panel",
+            { opacity: 0, y: 50 },
+            { scrollTrigger: { trigger: ".contact-info-section", start: "top 75%" }, opacity: 1, y: 0, duration: 1, ease: "power3.out", clearProps: "all" }
+        );
+
+
+        gsap.fromTo(".ci-item",
+            { opacity: 0, y: 20 },
+            {
+                scrollTrigger: { trigger: ".ci-showcase-panel", start: "top 85%" },
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                stagger: 0.15,
+                ease: "power3.out",
+                clearProps: "all" 
+            }
+        );
+
+
+
+
+
+
+
+
+        gsap.fromTo(".map-left",
+            { opacity: 0, x: -50 },
+            {
+                scrollTrigger: { trigger: ".map-section", start: "top 75%" },
+                opacity: 1,
+                x: 0,
+                duration: 1,
+                ease: "power3.out",
+                clearProps: "all"
+            }
+        );
+
+
+        gsap.fromTo(".map-right",
+            { opacity: 0, x: 50 },
+            {
+                scrollTrigger: { trigger: ".map-section", start: "top 75%" },
+                opacity: 1,
+                x: 0,
+                duration: 1,
+                ease: "power3.out",
+                clearProps: "all",
+                delay: 0.2
+            }
+        );
+
+
+
+
+
+
+
+        gsap.fromTo(".fcta-card",
+            { opacity: 0, y: 50, scale: 0.95 },
+            {
+                scrollTrigger: { trigger: ".final-cta-section", start: "top 80%" },
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 1,
+                ease: "power3.out",
+                clearProps: "all"
+            }
+        );
+
+
+        gsap.fromTo(".fcta-float",
+            { opacity: 0, scale: 0 },
+            {
+                scrollTrigger: { trigger: ".final-cta-section", start: "top 70%" },
+                opacity: 1,
+                scale: 1,
+                duration: 0.8,
+                stagger: 0.3,
+                ease: "back.out(2)",
+                clearProps: "all"
+            }
+        );
+
+
+    </script>
+</body>
+
+</html>

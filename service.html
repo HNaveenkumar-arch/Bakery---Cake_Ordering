@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Bakery & Cake Ordering</title>
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+
+    <div class="loader-wrapper" id="preloader">
+        <div class="loader"></div>
+        <p>Stackly Bakery...</p>
+    </div>
+
+
+    <header class="navbar" id="navbar">
+        <a href="index.html" class="logo-link" data-aos="fade-right">
+            <img src="./asset/redlogo.webp" alt="Stackly Logo" class="logo">
+        </a>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-menu" id="nav-menu">
+            <ul class="nav-links">
+                <li data-aos="fade-up" data-aos-delay="100"><a href="index.html">Home</a></li>
+                <li data-aos="fade-up" data-aos-delay="200"><a href="about.html">About</a></li>
+                <li data-aos="fade-up" data-aos-delay="300"><a href="service.html" class="active">Service</a></li>
+                <li data-aos="fade-up" data-aos-delay="400"><a href="blog.html">Blog</a></li>
+                <li data-aos="fade-up" data-aos-delay="500"><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-buttons" data-aos="fade-up" data-aos-delay="600">
+                <a href="login.html" class="btn login-btn">Login</a>
+                <a href="signup.html" class="btn signup-btn">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="srv-hero-section" id="srv-hero">
+
+
+        <div class="srv-hero-bg" style="background-image: url('./asset/a5.webp');"></div>
+        <div class="srv-hero-overlay"></div>
+
+        <div class="srv-hero-container">
+
+
+            <div class="srv-left">
+                <div class="srv-content-card">
+
+                    <div class="breadcrumb-card">
+                        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                        <i class="fa-solid fa-angles-right divider"></i>
+                        <span class="current">Services</span>
+                    </div>
+
+
+                    <div class="srv-text-wrapper">
+                        <h1 class="srv-title" id="srv-dyn-title">Sweet Services, <br><span>Made Just For You.</span>
+                        </h1>
+                        <p class="srv-desc" id="srv-dyn-desc">From everyday treats to custom celebration cakes, we make
+                            ordering your favourite desserts simple and delightful.</p>
+                    </div>
+
+                    <div class="srv-btns">
+                        <a href="404page.html" class="btn primary-btn srv-btn-fix"><i
+                                class="fa-solid fa-cake-candles"></i> Order A Cake</a>
+                        <a href="404page.html" class="btn outline-dark-btn srv-btn-fix">Explore Services</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="srv-right">
+
+
+                <div class="srv-img-shape">
+                    <img src="./asset/a15.webp" alt="Custom Celebration Cake" class="srv-main-img" id="srv-dyn-img">
+                </div>
+
+
+                <div class="srv-badge badge-fresh">
+                    <div class="badge-icon"><i class="fa-solid fa-fire-burner"></i></div>
+                    <div class="badge-text">
+                        <strong>Freshly Baked</strong>
+                        <span>Every Single Day</span>
+                    </div>
+                </div>
+
+                <div class="srv-badge badge-love">
+                    <div class="badge-icon"><i class="fa-solid fa-heart"></i></div>
+                    <div class="badge-text">
+                        <strong>Made With Love</strong>
+                        <span>Premium Quality</span>
+                    </div>
+                </div>
+
+
+                <img src="./asset/a11.webp" alt="Pastry" class="srv-mini-img">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+   Cake Ordering Service (Premium Interactive)
+========================================= -->
+    <section class="cake-order-section" id="order">
+        <div class="order-container">
+
+
+            <div class="order-left">
+                <div class="order-img-wrapper">
+                    <img src="./asset/a9.webp" alt="Chocolate Cake" id="order-main-img" class="order-img">
+
+                    <div class="order-premium-tag">
+                        <i class="fa-solid fa-crown"></i> Signature Series
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="order-right">
+                <h4 class="order-subtitle">Your Favourite Cake, Just A Click Away</h4>
+                <h2 class="order-title">Order Your <br><span>Perfect Cake.</span></h2>
+                <p class="order-desc">Choose from our delicious range of cakes made for every craving and celebration.
+                </p>
+
+
+                <div class="order-categories">
+
+                    <div class="cat-item active-cat" data-img="./asset/a9.webp">
+                        <h3>Chocolate Cakes</h3>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                    <div class="cat-item" data-img="./asset/a43.webp">
+                        <h3>Birthday Cakes</h3>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                    <div class="cat-item" data-img="./asset/a45.webp">
+                        <h3>Wedding Cakes</h3>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                    <div class="cat-item" data-img="./asset/a21.webp">
+                        <h3>Red Velvet Cakes</h3>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="order-features">
+                    <div class="feat-box">
+                        <i class="fa-solid fa-cookie-bite"></i>
+                        <span>Choose Flavour</span>
+                    </div>
+                    <div class="feat-box">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Select Size</span>
+                    </div>
+                    <div class="feat-box">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <span>Add Message</span>
+                    </div>
+                    <div class="feat-box">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>Schedule Delivery</span>
+                    </div>
+                </div>
+
+
+
+                <a href="404page.html" class="solid-box-btn">Start Your Order</a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="custom-cake-section" id="custom-design">
+        <div class="custom-container">
+
+            <div class="custom-header">
+                <h4 class="custom-subtitle">Dream It. We Bake It.</h4>
+                <h2 class="custom-title">Your Imagination, <br><span>Our Creation.</span></h2>
+                <p class="custom-desc">Create a cake that feels as special as your celebration. Follow our simple steps
+                    to bake your dream cake.</p>
+            </div>
+
+
+            <div class="custom-accordion-wrapper">
+
+
+                <div class="custom-card active-card">
+                    <div class="card-header">
+                        <div class="card-title-left">
+                            <span class="step-num">01</span>
+                            <h3>Choose Your Flavour</h3>
+                        </div>
+                        <div class="expand-icon"><i class="fa-solid fa-plus"></i></div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-content-inner">
+                            <div class="card-img-box">
+                                <img src="./asset/a34.webp" alt="Flavours">
+                            </div>
+                            <div class="card-details">
+                                <h4>Select your base</h4>
+                                <p>From rich cocoa to fresh fruit purees, our sponges are baked fresh daily using
+                                    premium ingredients.</p>
+
+                                <div class="example-tags">
+                                    <span>Chocolate</span>
+                                    <span>Vanilla Bean</span>
+                                    <span>Red Velvet</span>
+                                    <span>Strawberry</span>
+                                </div>
+
+
+                                <a href="404page.html" class="solid-box-btn">Select Flavour</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="custom-card">
+                    <div class="card-header">
+                        <div class="card-title-left">
+                            <span class="step-num">02</span>
+                            <h3>Pick Your Design</h3>
+                        </div>
+                        <div class="expand-icon"><i class="fa-solid fa-plus"></i></div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-content-inner">
+                            <div class="card-img-box">
+                                <img src="./asset/a5.webp" alt="Cake Design">
+                            </div>
+                            <div class="card-details">
+                                <h4>Craft your style</h4>
+                                <p>Whether you want elegant florals or a fun themed cake, our master decorators bring
+                                    your vision to life.</p>
+
+                                <div class="example-tags">
+                                    <span>Minimal</span>
+                                    <span>Floral Theme</span>
+                                    <span>Cartoon</span>
+                                    <span>Luxury Gold</span>
+                                </div>
+
+                                <a href="404page.html" class="solid-box-btn">Choose Design</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="custom-card">
+                    <div class="card-header">
+                        <div class="card-title-left">
+                            <span class="step-num">03</span>
+                            <h3>Add Your Message</h3>
+                        </div>
+                        <div class="expand-icon"><i class="fa-solid fa-plus"></i></div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-content-inner">
+                            <div class="card-img-box">
+                                <img src="./asset/a20.webp" alt="Message Details">
+                            </div>
+                            <div class="card-details">
+                                <h4>Make it personal</h4>
+                                <p>Add a beautiful handcrafted fondant message or an elegant piped greeting to make them
+                                    smile.</p>
+
+                                <div class="example-tags">
+                                    <span>Personalized Name</span>
+                                    <span>Birthday Wishes</span>
+                                    <span>Custom Quote</span>
+                                </div>
+
+                                <a href="404page.html" class="solid-box-btn">Add Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="custom-card">
+                    <div class="card-header">
+                        <div class="card-title-left">
+                            <span class="step-num">04</span>
+                            <h3>Select Your Size</h3>
+                        </div>
+                        <div class="expand-icon"><i class="fa-solid fa-plus"></i></div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-content-inner">
+                            <div class="card-img-box">
+                                <img src="./asset/a42.webp" alt="Cake Size">
+                            </div>
+                            <div class="card-details">
+                                <h4>Perfect for the party</h4>
+                                <p>From intimate gatherings to grand celebrations, choose the perfect weight and tiers
+                                    for your occasion.</p>
+
+                                <div class="example-tags">
+                                    <span>0.5 Kg (2-4 People)</span>
+                                    <span>1 Kg (5-8 People)</span>
+                                    <span>2+ Kg (Parties)</span>
+                                </div>
+
+                                <a href="404page.html" class="solid-box-btn">Start Custom Order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="pastry-bar-section" id="dessert-bar">
+
+        <div class="pastry-header">
+            <h4 class="pastry-subtitle">Little Treats, Big Happiness</h4>
+            <h2 class="pastry-title">Freshly Baked Favourites, <br><span>Anytime.</span></h2>
+        </div>
+
+
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+
+
+
+
+                <div class="pastry-card">
+                    <div class="pastry-img-box">
+                        <img src="./asset/a35.webp" alt="Croissants">
+                        <div class="pastry-overlay">
+                            <a href="404page.html" class="solid-box-btn pastry-btn"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class="pastry-info">
+                        <div class="title-price-row">
+                            <h3>Butter Croissant</h3>
+                            <span class="price">$4.50</span>
+                        </div>
+                        <p>Flaky, golden, and baked fresh every morning.</p>
+                    </div>
+                </div>
+
+
+                <div class="pastry-card">
+                    <div class="pastry-img-box">
+                        <img src="./asset/a49.webp" alt="Cupcakes">
+                        <div class="pastry-overlay">
+                            <a href="404page.html" class="solid-box-btn pastry-btn"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class="pastry-info">
+                        <div class="title-price-row">
+                            <h3>Berry Cupcake</h3>
+                            <span class="price">$3.80</span>
+                        </div>
+                        <p>Soft vanilla sponge topped with strawberry buttercream.</p>
+                    </div>
+                </div>
+
+
+                <div class="pastry-card">
+                    <div class="pastry-img-box">
+                        <img src="./asset/a48.webp" alt="Brownies">
+                        <div class="pastry-overlay">
+                            <a href="404page.html" class="solid-box-btn pastry-btn"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class="pastry-info">
+                        <div class="title-price-row">
+                            <h3>Fudgy Brownie</h3>
+                            <span class="price">$5.00</span>
+                        </div>
+                        <p>Rich, dark chocolate brownie with a gooey center.</p>
+                    </div>
+                </div>
+
+
+                <div class="pastry-card">
+                    <div class="pastry-img-box">
+                        <img src="./asset/a14.webp" alt="Donuts">
+                        <div class="pastry-overlay">
+                            <a href="404page.html" class="solid-box-btn pastry-btn"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class="pastry-info">
+                        <div class="title-price-row">
+                            <h3>Glazed Donut</h3>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <p>Classic ring donut with a sweet vanilla glaze.</p>
+                    </div>
+                </div>
+
+
+                <div class="pastry-card">
+                    <div class="pastry-img-box">
+                        <img src="./asset/a16.webp" alt="Cookies">
+                        <div class="pastry-overlay">
+                            <a href="404page.html" class="solid-box-btn pastry-btn"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class="pastry-info">
+                        <div class="title-price-row">
+                            <h3>Choco Cookie</h3>
+                            <span class="price">$2.90</span>
+                        </div>
+                        <p>Chewy chocolate chip cookie packed with chunks.</p>
+                    </div>
+                </div>
+
+
+                <div class="pastry-card">
+                    <div class="pastry-img-box">
+                        <img src="./asset/a50.webp" alt="Cheesecake">
+                        <div class="pastry-overlay">
+                            <a href="404page.html" class="solid-box-btn pastry-btn"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class="pastry-info">
+                        <div class="title-price-row">
+                            <h3>Cheesecake Slice</h3>
+                            <span class="price">$6.50</span>
+                        </div>
+                        <p>Creamy New York style cheesecake with a graham crust.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="pastry-card">
+                    <div class="pastry-img-box"><img src="./asset/a35.webp" alt="Croissants">
+                        <div class="pastry-overlay"><a href="404page.html" class="solid-box-btn pastry-btn"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add to Cart</a></div>
+                    </div>
+                    <div class="pastry-info">
+                        <div class="title-price-row">
+                            <h3>Butter Croissant</h3><span class="price">$4.50</span>
+                        </div>
+                        <p>Flaky, golden, and baked fresh every morning.</p>
+                    </div>
+                </div>
+                <div class="pastry-card">
+                    <div class="pastry-img-box"><img src="./asset/a49.webp" alt="Cupcakes">
+                        <div class="pastry-overlay"><a href="404page.html" class="solid-box-btn pastry-btn"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add to Cart</a></div>
+                    </div>
+                    <div class="pastry-info">
+                        <div class="title-price-row">
+                            <h3>Berry Cupcake</h3><span class="price">$3.80</span>
+                        </div>
+                        <p>Soft vanilla sponge topped with strawberry buttercream.</p>
+                    </div>
+                </div>
+                <div class="pastry-card">
+                    <div class="pastry-img-box"><img src="./asset/a48.webp" alt="Brownies">
+                        <div class="pastry-overlay"><a href="404page.html" class="solid-box-btn pastry-btn"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add to Cart</a></div>
+                    </div>
+                    <div class="pastry-info">
+                        <div class="title-price-row">
+                            <h3>Fudgy Brownie</h3><span class="price">$5.00</span>
+                        </div>
+                        <p>Rich, dark chocolate brownie with a gooey center.</p>
+                    </div>
+                </div>
+                <div class="pastry-card">
+                    <div class="pastry-img-box"><img src="./asset/a14.webp" alt="Donuts">
+                        <div class="pastry-overlay"><a href="404page.html" class="solid-box-btn pastry-btn"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add to Cart</a></div>
+                    </div>
+                    <div class="pastry-info">
+                        <div class="title-price-row">
+                            <h3>Glazed Donut</h3><span class="price">$3.50</span>
+                        </div>
+                        <p>Classic ring donut with a sweet vanilla glaze.</p>
+                    </div>
+                </div>
+                <div class="pastry-card">
+                    <div class="pastry-img-box"><img src="./asset/a16.webp" alt="Cookies">
+                        <div class="pastry-overlay"><a href="404page.html" class="solid-box-btn pastry-btn"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add to Cart</a></div>
+                    </div>
+                    <div class="pastry-info">
+                        <div class="title-price-row">
+                            <h3>Choco Cookie</h3><span class="price">$2.90</span>
+                        </div>
+                        <p>Chewy chocolate chip cookie packed with chunks.</p>
+                    </div>
+                </div>
+                <div class="pastry-card">
+                    <div class="pastry-img-box"><img src="./asset/a50.webp" alt="Cheesecake">
+                        <div class="pastry-overlay"><a href="404page.html" class="solid-box-btn pastry-btn"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add to Cart</a></div>
+                    </div>
+                    <div class="pastry-info">
+                        <div class="title-price-row">
+                            <h3>Cheesecake Slice</h3><span class="price">$6.50</span>
+                        </div>
+                        <p>Creamy New York style cheesecake with a graham crust.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="catering-section" id="catering">
+        <div class="catering-container">
+
+
+            <div class="catering-left">
+                <div class="cat-img-wrapper">
+                    <img src="./asset/a7.webp" alt="Birthday Catering" id="cat-main-img" class="cat-img">
+
+                    <div class="cat-img-overlay">
+                        <span class="cat-badge"><i class="fa-solid fa-champagne-glasses"></i> Premium Catering</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="catering-right">
+                <h4 class="cat-subtitle">Make Your Event Extra Sweet</h4>
+                <h2 class="cat-title">Sweet Catering For <br><span>Every Occasion.</span></h2>
+                <p class="cat-desc">We create delicious dessert experiences for birthdays, weddings, parties and special
+                    gatherings.</p>
+
+
+                <div class="cat-service-list">
+
+
+                    <div class="cat-item-box active-cat-box" data-img="./asset/a7.webp">
+                        <div class="cat-item-head">
+                            <h3><span class="cat-num">01</span> Birthday Parties</h3>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="cat-item-body">
+                            <div class="cat-body-content">
+                                <p>Custom cakes and beautiful dessert boxes designed perfectly to make your birthday
+                                    celebrations unforgettable.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cat-item-box" data-img="./asset/a44.webp">
+                        <div class="cat-item-head">
+                            <h3><span class="cat-num">02</span> Weddings</h3>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="cat-item-body">
+                            <div class="cat-body-content">
+                                <p>Elegant, multi-tiered wedding cakes and stunning dessert tables tailored to your
+                                    dream wedding theme.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cat-item-box" data-img="./asset/a20.webp">
+                        <div class="cat-item-head">
+                            <h3><span class="cat-num">03</span> Corporate Events</h3>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="cat-item-body">
+                            <div class="cat-body-content">
+                                <p>Premium treats, branded cupcakes, and professional setups for office celebrations and
+                                    client meetings.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cat-item-box" data-img="./asset/a46.webp">
+                        <div class="cat-item-head">
+                            <h3><span class="cat-num">04</span> Private Celebrations</h3>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="cat-item-body">
+                            <div class="cat-body-content">
+                                <p>Beautiful handcrafted desserts for baby showers, anniversaries, and all your
+                                    memorable intimate moments.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <a href="404page.html" class="solid-box-btn">Plan Your Event</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="order-process-section" id="process">
+
+        <div class="process-header">
+            <h4 class="process-subtitle">From Your Idea To Your Table</h4>
+            <h2 class="process-title">A Simple Way To Order <br><span>Something Sweet.</span></h2>
+        </div>
+
+        <div class="process-container">
+
+
+            <div class="process-left">
+                <div class="process-sticky-wrapper">
+
+
+                    <img src="./asset/a35.webp" alt="Browse Menu" class="proc-img active-proc-img" id="proc-img-0">
+                    <img src="./asset/a4.webp" alt="Customize" class="proc-img" id="proc-img-1">
+                    <img src="./asset/a14.webp" alt="Place Order" class="proc-img" id="proc-img-2">
+                    <img src="./asset/a45.webp" alt="Bake Fresh" class="proc-img" id="proc-img-3">
+                    <img src="./asset/a39.webp" alt="Delivery" class="proc-img" id="proc-img-4">
+
+
+                    <div class="floating-process-badge">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="process-right">
+
+
+                <div class="timeline-line-bg">
+                    <div class="timeline-line-fill"></div>
+                </div>
+
+
+                <div class="proc-step" data-index="0">
+                    <div class="proc-dot"></div>
+                    <div class="proc-content">
+                        <h3><span>01</span> Browse Our Menu</h3>
+                        <p>Explore our wide range of premium cakes, delicate pastries, and sweet desserts made for every
+                            craving.</p>
+
+                        <img src="./asset/a35.webp" class="proc-mobile-img" alt="Browse">
+                    </div>
+                </div>
+
+
+                <div class="proc-step" data-index="1">
+                    <div class="proc-dot"></div>
+                    <div class="proc-content">
+                        <h3><span>02</span> Customize Your Order</h3>
+                        <p>Choose your favourite flavours, select the perfect sizes, and pick designs that match your
+                            celebration.</p>
+                        <img src="./asset/a4.webp" class="proc-mobile-img" alt="Customize">
+                    </div>
+                </div>
+
+
+                <div class="proc-step" data-index="2">
+                    <div class="proc-dot"></div>
+                    <div class="proc-content">
+                        <h3><span>03</span> Place Your Order</h3>
+                        <p>Confirm your custom details, add any personal messages, and choose your preferred delivery
+                            date.</p>
+                        <img src="./asset/a14.webp" class="proc-mobile-img" alt="Place Order">
+                    </div>
+                </div>
+
+
+                <div class="proc-step" data-index="3">
+                    <div class="proc-dot"></div>
+                    <div class="proc-content">
+                        <h3><span>04</span> We Bake Fresh</h3>
+                        <p>Our expert bakers and decorators prepare your treats from scratch using only the finest
+                            ingredients.</p>
+                        <img src="./asset/a45.webp" class="proc-mobile-img" alt="Bake Fresh">
+                    </div>
+                </div>
+
+
+                <div class="proc-step" data-index="4">
+                    <div class="proc-dot"></div>
+                    <div class="proc-content">
+                        <h3><span>05</span> Delivered To You</h3>
+                        <p>Receive your beautifully packaged order right at your doorstep, ready to be enjoyed and
+                            shared.</p>
+                        <img src="./asset/a39.webp" class="proc-mobile-img" alt="Delivery">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+   Bakery Membership Section (Premium Bubble Design)
+========================================= -->
+    <section class="membership-section" id="membership">
+
+
+        <div class="mem-marquee-wrapper">
+            <div class="mem-marquee-track">
+                <span> VIP Access</span> <span> Birthday Treats</span> <span> Exclusive Offers</span> <span> Sweet
+                    Rewards</span>
+                <span> VIP Access</span> <span> Birthday Treats</span> <span> Exclusive Offers</span> <span> Sweet
+                    Rewards</span>
+                <span> VIP Access</span> <span> Birthday Treats</span> <span> Exclusive Offers</span> <span> Sweet
+                    Rewards</span>
+            </div>
+        </div>
+
+
+        <div class="bg-bubble b-one"></div>
+        <div class="bg-bubble b-two"></div>
+        <div class="bg-bubble b-three"></div>
+
+        <div class="mem-container">
+
+
+            <div class="mem-left">
+                <div class="mem-card-wrapper" id="mem-3d-card">
+                    <div class="mem-card">
+                        <div class="card-glow"></div>
+                        <div class="card-top">
+                            <i class="fa-solid fa-crown card-logo"></i>
+                            <span class="card-type">Signature Club</span>
+                        </div>
+                        <div class="card-chip"></div>
+                        <div class="card-bottom">
+                            <div class="card-name">Sweet Member</div>
+                            <div class="card-valid">Valid Thru <span>12/28</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mem-right">
+                <h4 class="mem-subtitle">Make Every Month A Little Sweeter</h4>
+                <h2 class="mem-title">Join Our <br><span>Sweet Club.</span></h2>
+                <p class="mem-desc">Discover special offers and bakery treats through our premium membership experience.
+                </p>
+
+
+                <div class="bubble-benefits">
+
+
+                    <div class="benefit-bubble">
+                        <div class="bubble-icon"><i class="fa-solid fa-gift"></i></div>
+                        <div class="bubble-text">
+                            <h3>Sweet Rewards</h3>
+                            <p>Earn rewards on eligible orders.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="benefit-bubble">
+                        <div class="bubble-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                        <div class="bubble-text">
+                            <h3>Birthday Specials</h3>
+                            <p>Celebrate with special offers.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="benefit-bubble">
+                        <div class="bubble-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="bubble-text">
+                            <h3>Early Access</h3>
+                            <p>Discover selected new products first.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="benefit-bubble">
+                        <div class="bubble-icon"><i class="fa-solid fa-star"></i></div>
+                        <div class="bubble-text">
+                            <h3>Exclusive Treats</h3>
+                            <p>Enjoy member-only bakery offers.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <a href="404page.html" class="solid-box-btn">Join Our Sweet Club</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================================
+   Final CTA Section (Image Background & Glass Card)
+========================================= -->
+    <section class="elite-cta-section" id="elite-cta">
+
+
+        <div class="elite-bg" style="background-image: url('./asset/a46.webp');"></div>
+
+
+        <div class="elite-overlay"></div>
+
+        <div class="elite-container">
+
+
+            <div class="elite-content-card">
+                <h4 class="elite-subtitle"><i class="fa-solid fa-crown"></i> Taste The Perfection</h4>
+                <h2 class="elite-title">Ready To Order <br><span>Something Delicious?</span></h2>
+                <p class="elite-desc">Fresh cakes, delightful pastries, and beautiful treats are waiting for you. Let's
+                    make your next sweet celebration completely unforgettable.</p>
+
+                <div class="elite-btns">
+                    <a href="404page.html" class="elite-solid-btn">Order Now</a>
+                    <a href="404page.html" class="elite-outline-btn">Contact Our Bakery</a>
+                </div>
+            </div>
+
+
+            <div class="elite-visuals">
+
+
+                <div class="elite-img-large">
+                    <img src="./asset/a5.webp" alt="Premium Cake">
+                </div>
+
+
+                <div class="elite-img-small">
+                    <img src="./asset/a36.webp" alt="Pastries">
+
+
+                    <div class="elite-badge">
+                        <span>100%</span> Fresh
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <div class="footer-logo">
+                    <a href="index.html"><img src="./asset/redlogo.webp" alt="Stackly Logo" class="logo"></a>
+                </div>
+                <p>Baking memories with every bite. Order customized cakes, fresh pastries, and treats.</p>
+                <div class="social-links">
+                    <a href="404page.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Our Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h4>Stackly Delights</h4>
+                <ul>
+                    <li><a href="404page.html">Custom Wedding Cakes</a></li>
+                    <li><a href="404page.html">Birthday Specials</a></li>
+                    <li><a href="404page.html">Cupcakes & Pastries</a></li>
+                    <li><a href="404page.html">Gluten-Free Options</a></li>
+                    <li><a href="404page.html">Online Cake Ordering</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-info" data-aos="fade-up" data-aos-delay="400">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@thestackly.com</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Mon – Sun: 8:00 AM – 9:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly Bakery. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="404page.html">Privacy Policy</a>
+                <a href="404page.html">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+    <script src="script.js"></script>
+
+    <script>
+
+
+
+
+
+        const srvTl = gsap.timeline();
+
+        srvTl.from(".breadcrumb-card", { opacity: 0, y: -20, duration: 0.6, ease: "power2.out" })
+            .from(".srv-title", { opacity: 0, y: 30, duration: 0.8, ease: "power3.out" }, "-=0.3")
+            .from(".srv-desc", { opacity: 0, y: 30, duration: 0.8, ease: "power3.out" }, "-=0.5")
+            .fromTo(".srv-btns .btn",
+                { opacity: 0, scale: 0.9 },
+                { opacity: 1, scale: 1, duration: 0.5, stagger: 0.1, ease: "back.out(1.5)", clearProps: "all" },
+                "-=0.4"
+            )
+            .from(".srv-img-shape", { opacity: 0, x: 50, duration: 1, ease: "power3.out" }, "-=1")
+            .from(".srv-badge", { opacity: 0, scale: 0.8, duration: 0.6, stagger: 0.2, ease: "back.out(1.5)" }, "-=0.5")
+            .from(".srv-mini-img", { opacity: 0, y: 30, duration: 0.6, ease: "back.out(1.5)" }, "-=0.4");
+
+
+        gsap.to(".badge-fresh", { y: -15, duration: 2.5, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 1 });
+        gsap.to(".badge-love", { y: 15, duration: 3, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 1.5 });
+        gsap.to(".srv-mini-img", { y: -20, rotation: 5, duration: 3.5, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 2 });
+        gsap.to(".srv-main-img", { scale: 1.08, duration: 8, repeat: -1, yoyo: true, ease: "sine.inOut" });
+
+
+        const srvData = [
+            {
+                title: "Sweet Services, <br><span>Made Just For You.</span>",
+                desc: "From everyday treats to custom celebration cakes, we make ordering your favourite desserts simple and delightful.",
+                img: "./asset/a10.webp"
+            },
+            {
+                title: "Crafting Joy For <br><span>Special Occasions.</span>",
+                desc: "Explore our bespoke dessert catering services for weddings, corporate events, and grand parties. We bake your dreams.",
+                img: "./asset/a35.webp"
+            }
+        ];
+
+        const sTitle = document.getElementById("srv-dyn-title");
+        const sDesc = document.getElementById("srv-dyn-desc");
+        const sImg = document.getElementById("srv-dyn-img");
+
+        let currentSrvSlide = 0;
+
+        if (sTitle && sImg) {
+            setInterval(() => {
+                let nextSrv = (currentSrvSlide + 1) % srvData.length;
+
+                gsap.to([sTitle, sDesc, sImg], {
+                    opacity: 0, y: -10, duration: 0.5,
+                    onComplete: () => {
+                        sTitle.innerHTML = srvData[nextSrv].title;
+                        sDesc.innerHTML = srvData[nextSrv].desc;
+                        sImg.src = srvData[nextSrv].img;
+
+                        gsap.to([sTitle, sDesc, sImg], {
+                            opacity: 1, y: 0, duration: 0.8, ease: "power2.out", clearProps: "y"
+                        });
+                    }
+                });
+                currentSrvSlide = nextSrv;
+            }, 6000);
+        }
+
+
+
+
+
+
+        gsap.from(".order-img-wrapper", {
+            scrollTrigger: { trigger: ".cake-order-section", start: "top 75%" },
+            opacity: 0, x: -50, duration: 1, ease: "power3.out"
+        });
+
+
+        gsap.fromTo(".solid-box-btn",
+            { opacity: 0, y: 20 },
+            {
+                scrollTrigger: { trigger: ".cake-order-section", start: "top 75%" },
+                opacity: 1, y: 0, duration: 0.8, ease: "back.out(1.5)", delay: 0.6, clearProps: "all"
+            }
+        );
+
+
+        gsap.fromTo(".order-right .btn",
+            { opacity: 0, y: 20 },
+            {
+                scrollTrigger: { trigger: ".cake-order-section", start: "top 75%" },
+                opacity: 1, y: 0, duration: 0.8, ease: "back.out(1.5)", delay: 0.6, clearProps: "all"
+            }
+        );
+
+
+        const catItems = document.querySelectorAll(".cat-item");
+        const orderMainImg = document.getElementById("order-main-img");
+
+        if (catItems.length > 0 && orderMainImg) {
+            catItems.forEach(item => {
+
+                item.addEventListener("mouseenter", function () { changeOrderImage(this); });
+                item.addEventListener("click", function () { changeOrderImage(this); });
+            });
+
+            function changeOrderImage(element) {
+
+                catItems.forEach(cat => cat.classList.remove("active-cat"));
+
+
+                element.classList.add("active-cat");
+
+
+                const newImgSrc = element.getAttribute("data-img");
+
+                if (orderMainImg.src !== newImgSrc) {
+                    gsap.to(orderMainImg, {
+                        opacity: 0.5,
+                        duration: 0.2,
+                        onComplete: () => {
+                            orderMainImg.src = newImgSrc;
+                            gsap.to(orderMainImg, { opacity: 1, duration: 0.3, ease: "power2.out" });
+                        }
+                    });
+                }
+            }
+        }
+
+
+
+
+
+
+
+        gsap.from(".custom-header", {
+            scrollTrigger: { trigger: ".custom-cake-section", start: "top 80%" },
+            opacity: 0, y: 30, duration: 1, ease: "power3.out"
+        });
+
+        gsap.from(".custom-card", {
+            scrollTrigger: { trigger: ".custom-cake-section", start: "top 75%" },
+            opacity: 0, y: 40, duration: 0.8, stagger: 0.15, ease: "power3.out"
+        });
+
+
+        const customCards = document.querySelectorAll(".card-header");
+
+        customCards.forEach(header => {
+            header.addEventListener("click", () => {
+                const parentCard = header.parentElement;
+
+
+                if (parentCard.classList.contains("active-card")) {
+                    parentCard.classList.remove("active-card");
+                } else {
+
+                    document.querySelectorAll(".custom-card").forEach(card => {
+                        card.classList.remove("active-card");
+                    });
+
+                    parentCard.classList.add("active-card");
+                }
+            });
+        });
+
+
+
+
+
+
+        gsap.from(".pastry-header", {
+            scrollTrigger: { trigger: ".pastry-bar-section", start: "top 80%" },
+            opacity: 0, y: 30, duration: 1, ease: "power3.out"
+        });
+
+        gsap.from(".marquee-wrapper", {
+            scrollTrigger: { trigger: ".pastry-bar-section", start: "top 75%" },
+            opacity: 0, duration: 1.5, ease: "power2.out"
+        });
+
+
+
+
+
+
+        gsap.from(".cat-img-wrapper", {
+            scrollTrigger: { trigger: ".catering-section", start: "top 75%" },
+            opacity: 0, x: -50, duration: 1, ease: "power3.out"
+        });
+
+        gsap.from(".catering-right > *:not(.cat-service-list)", {
+            scrollTrigger: { trigger: ".catering-section", start: "top 75%" },
+            opacity: 0, x: 50, duration: 1, ease: "power3.out", stagger: 0.1
+        });
+
+        gsap.from(".cat-item-box", {
+            scrollTrigger: { trigger: ".catering-section", start: "top 70%" },
+            opacity: 0, y: 30, duration: 0.8, stagger: 0.15, ease: "power3.out", delay: 0.2
+        });
+
+
+        const catBoxes = document.querySelectorAll(".cat-item-box");
+        const catMainImg = document.getElementById("cat-main-img");
+
+        if (catBoxes.length > 0 && catMainImg) {
+            catBoxes.forEach(box => {
+
+                box.addEventListener("mouseenter", function () { syncCatering(this); });
+                box.addEventListener("click", function () { syncCatering(this); });
+            });
+
+            function syncCatering(element) {
+
+                if (element.classList.contains("active-cat-box")) return;
+
+
+                catBoxes.forEach(b => b.classList.remove("active-cat-box"));
+
+
+                element.classList.add("active-cat-box");
+
+
+                const newImgSrc = element.getAttribute("data-img");
+
+                if (catMainImg.src !== newImgSrc) {
+                    gsap.to(catMainImg, {
+                        opacity: 0.4,
+                        scale: 0.98, 
+                        duration: 0.2,
+                        onComplete: () => {
+                            catMainImg.src = newImgSrc;
+                            gsap.to(catMainImg, { opacity: 1, scale: 1, duration: 0.4, ease: "power2.out" });
+                        }
+                    });
+                }
+            }
+        }
+
+
+
+
+
+
+
+        gsap.from(".process-header", {
+            scrollTrigger: { trigger: ".order-process-section", start: "top 80%" },
+            opacity: 0, y: 30, duration: 1, ease: "power3.out"
+        });
+
+        const processSteps = document.querySelectorAll(".proc-step");
+        const processImages = document.querySelectorAll(".proc-img");
+
+        if (processSteps.length > 0) {
+
+
+            gsap.to(".timeline-line-fill", {
+                scrollTrigger: {
+                    trigger: ".process-right",
+                    start: "top 60%", 
+                    end: "bottom 60%", 
+                    scrub: true 
+                },
+                height: "100%",
+                ease: "none"
+            });
+
+
+            processSteps.forEach((step, i) => {
+                ScrollTrigger.create({
+                    trigger: step,
+                    start: "top 60%",
+                    end: "bottom 40%",
+                    onEnter: () => activateStep(i),
+                    onEnterBack: () => activateStep(i)
+                });
+            });
+
+            function activateStep(index) {
+
+                processSteps.forEach(s => s.classList.remove("active-step"));
+                processSteps[index].classList.add("active-step");
+
+
+                if (processImages.length > 0 && window.innerWidth > 992) {
+                    processImages.forEach(img => img.classList.remove("active-proc-img"));
+                    processImages[index].classList.add("active-proc-img");
+                }
+            }
+        }
+
+
+
+
+
+
+
+        gsap.from(".mem-right > h4, .mem-right > h2, .mem-right > p", {
+            scrollTrigger: { trigger: ".membership-section", start: "top 75%" },
+            opacity: 0, y: 30, duration: 1, stagger: 0.1, ease: "power3.out"
+        });
+
+        gsap.from(".benefit-bubble", {
+            scrollTrigger: { trigger: ".membership-section", start: "top 70%" },
+            opacity: 0, y: 40, scale: 0.9, duration: 0.6, stagger: 0.15, ease: "back.out(1.5)"
+        });
+
+        gsap.from(".mem-left", {
+            scrollTrigger: { trigger: ".membership-section", start: "top 75%" },
+            opacity: 0, x: -50, rotationY: -15, duration: 1, ease: "power3.out"
+        });
+
+
+        const cardWrapper = document.getElementById("mem-3d-card");
+        const cardGlow = document.querySelector(".card-glow");
+
+        if (cardWrapper && window.innerWidth > 992) {
+            cardWrapper.addEventListener("mousemove", (e) => {
+                const rect = cardWrapper.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+
+                const rotateX = ((y - centerY) / centerY) * -15;
+                const rotateY = ((x - centerX) / centerX) * 15;
+
+
+                cardWrapper.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+
+
+                if (cardGlow) {
+                    cardGlow.style.transform = `translate(${x}px, ${y}px)`;
+                }
+            });
+
+
+            cardWrapper.addEventListener("mouseleave", () => {
+                cardWrapper.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                if (cardGlow) {
+                    cardGlow.style.transform = `translate(-50%, -50%)`;
+                }
+            });
+        }
+
+
+
+
+
+
+
+        gsap.from(".elite-content > *", {
+            scrollTrigger: {
+                trigger: ".elite-cta-section",
+                start: "top 75%"
+            },
+            opacity: 0,
+            y: 40,
+            duration: 1,
+            stagger: 0.15,
+            ease: "power3.out"
+        });
+
+
+        gsap.from(".elite-img-large", {
+            scrollTrigger: {
+                trigger: ".elite-cta-section",
+                start: "top 75%"
+            },
+            opacity: 0,
+            x: 60,
+            rotation: 3,
+            duration: 1.2,
+            ease: "power3.out"
+        });
+
+
+        gsap.from(".elite-img-small", {
+            scrollTrigger: {
+                trigger: ".elite-cta-section",
+                start: "top 65%"
+            },
+            opacity: 0,
+            scale: 0.5,
+            x: -30,
+            y: 30,
+            duration: 1,
+            ease: "back.out(1.5)",
+            delay: 0.4
+        });
+
+
+        gsap.to(".elite-img-small", {
+            y: -15,
+            duration: 4,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: 1.5
+        });
+
+    </script>
+</body>
+
+</html>

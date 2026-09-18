@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Stackly Bakery</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+         
+        html {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            height: 100dvh;
+             
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+             
+            top: 0;
+            left: 0;
+            padding: 1rem;
+            overflow: hidden;
+             
+             
+        }
+
+        .bg-image {
+            position: absolute;
+            inset: -5%;
+            background: url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            z-index: 0;
+        }
+
+        .bg-overlay {
+            position: absolute;
+            inset: 0;
+             
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 1;
+        }
+
+        .card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 600px;
+            padding: 3.5rem 3rem;
+            border-radius: 24px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 25px 60px rgba(230, 57, 70, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            border: 1px solid rgba(230, 57, 70, 0.1);
+        }
+
+        .shatter-container {
+            position: relative;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .error-digits {
+            display: flex;
+            gap: 10px;
+            z-index: 2;
+        }
+
+        .digit {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(4.5rem, 15vw, 8.5rem);
+            color: #E63946;
+            line-height: 1;
+            text-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        .shard {
+            position: absolute;
+            background: #E63946;
+            top: 50%;
+            left: 50%;
+            transform-origin: center;
+            z-index: 1;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 5vw, 2.5rem);
+            color: #2B2B2B;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        p {
+            font-size: clamp(0.95rem, 3vw, 1.1rem);
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            flex: 1;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .btn-outline {
+            border: 2px solid #E63946;
+            color: #E63946;
+            background: #ffffff;
+        }
+
+        .btn-outline:hover {
+            background: #E63946;
+            color: #ffffff;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+        }
+
+        .btn-solid {
+            border: 2px solid #E63946;
+            background: #E63946;
+            color: #ffffff;
+            box-shadow: 0 10px 25px rgba(230, 57, 70, 0.25);
+        }
+
+        .btn-solid:hover {
+            background: #ffffff;
+            color: #E63946;
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(230, 57, 70, 0.3);
+        }
+
+         
+        @media screen and (max-width: 768px) {
+            .card {
+                padding: 3rem 2rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .card {
+                padding: 2.5rem 1.25rem;
+                border-radius: 20px;
+                max-width: 90%;
+                 
+            }
+
+            .shatter-container {
+                height: 110px;
+                margin-bottom: 1rem;
+            }
+
+            .btn-group {
+                flex-direction: column;
+                gap: 0.85rem;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 0.85rem 1.5rem;
+            }
+
+            p {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-image"></div>
+    <div class="bg-overlay"></div>
+
+    <div class="card">
+        <div class="shatter-container" id="shatterBox">
+            <div class="error-digits">
+                <div class="digit">4</div>
+                <div class="digit">0</div>
+                <div class="digit">4</div>
+            </div>
+        </div>
+        <h2 class="gsap-text">Completely Crumbled</h2>
+        <p class="gsap-text">The premium treat you are looking for has been shattered or moved. Let us serve you a fresh
+            experience.</p>
+
+        <div class="btn-group gsap-text">
+            <a href="javascript:history.back()" class="btn btn-outline">Go Back</a>
+             
+            <a href="index.html" class="btn btn-solid">Back to Home</a>
+        </div>
+    </div>
+
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.to(".bg-image", {
+                scale: 1.1,
+                duration: 20,
+                ease: "sine.inOut",
+                yoyo: true,
+                repeat: -1
+            });
+
+            gsap.set(".card", { visibility: "visible" });
+
+            gsap.fromTo(".card",
+                { opacity: 0, y: 60, scale: 0.95 },
+                { opacity: 1, y: 0, scale: 1, duration: 1.2, ease: "power4.out" }
+            );
+
+            gsap.fromTo(".gsap-text",
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 1, stagger: 0.15, ease: "power2.out", delay: 0.6 }
+            );
+
+            const shatterBox = document.getElementById('shatterBox');
+            const colors = ['#E63946', '#FF4D5A', '#FFFFFF', '#FFB3B8'];
+            const shards = [];
+
+ 
+            const isMobile = window.innerWidth <= 480;
+            const shardCount = isMobile ? 25 : 45;
+
+            for (let i = 0; i < shardCount; i++) {
+                const shard = document.createElement('div');
+                shard.classList.add('shard');
+
+                const size = Math.random() * 12 + 5;
+                shard.style.width = `${size}px`;
+                shard.style.height = `${size}px`;
+                shard.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+                const clipPaths = [
+                    'polygon(50% 0%, 0% 100%, 100% 100%)',
+                    'polygon(0 0, 100% 0, 50% 100%)',
+                    'polygon(0 50%, 100% 0, 100% 100%)',
+                    'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)'
+                ];
+                shard.style.clipPath = clipPaths[Math.floor(Math.random() * clipPaths.length)];
+
+                if (shard.style.backgroundColor === 'rgb(255, 255, 255)') {
+                    shard.style.border = '1px solid #E63946';
+                }
+
+                shatterBox.appendChild(shard);
+                shards.push(shard);
+            }
+
+            const scatterDistance = isMobile ? 250 : 500;
+
+            gsap.fromTo(shards,
+                { x: 0, y: 0, rotation: 0, opacity: 1, scale: 0 },
+                {
+                    x: () => (Math.random() - 0.5) * scatterDistance,
+                    y: () => (Math.random() - 0.2) * scatterDistance,
+                    rotation: () => Math.random() * 720 - 360,
+                    opacity: 0,
+                    scale: () => Math.random() * 1.5 + 0.5,
+                    duration: () => Math.random() * 1.5 + 1.5,
+                    ease: "power3.out",
+                    delay: 0.3,
+                    stagger: 0.01
+                }
+            );
+
+            gsap.fromTo(".digit",
+                { y: -100, opacity: 0, rotation: () => Math.random() * -30 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    rotation: () => (Math.random() - 0.5) * 15,
+                    duration: 1.2,
+                    ease: "bounce.out",
+                    delay: 0.2,
+                    stagger: 0.1
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>

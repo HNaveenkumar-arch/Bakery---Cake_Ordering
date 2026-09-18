@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard | Sweet Crumbs</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="customer_data.css">
+</head>
+
+<body>
+
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+
+    <nav class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <a href="index.html" class="logo-link">
+                <img src="./asset/redlogo.webp" alt="logo"> </a>
+            <div class="dashboard-badge">Customer Portal</div>
+        </div>
+
+        <div class="nav-sections">
+            <a class="nav-item active" onclick="switchTab('tab-overview', this, 'Dashboard Overview')"><i
+                    class="fas fa-home"></i> Dashboard</a>
+            <a class="nav-item" onclick="switchTab('tab-orders', this, 'My Orders & History')"><i
+                    class="fas fa-shopping-bag"></i> My Orders</a>
+            <a class="nav-item" onclick="switchTab('tab-custom', this, 'Custom Cake Requests')"><i
+                    class="fas fa-wand-magic-sparkles"></i> Custom Requests</a>
+            <a class="nav-item" onclick="switchTab('tab-favorites', this, 'Saved Favorites')"><i
+                    class="fas fa-heart"></i> Favorites</a>
+            <a class="nav-item" onclick="switchTab('tab-rewards', this, 'Rewards & Loyalty')"><i
+                    class="fas fa-gift"></i> Rewards</a>
+            <a class="nav-item" onclick="switchTab('tab-settings', this, 'Account Settings')"><i class="fas fa-cog"></i>
+                Settings</a>
+        </div>
+
+
+        <div class="profile-card">
+            <div class="profile-avatar"><i class="fas fa-user"></i></div>
+            <div class="profile-info">
+                <h4 id="userNameDisplay">Customer</h4>
+                <p id="userEmailDisplay">customer@sweetcrumbs.com</p>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="main-content">
+
+
+        <header class="topbar">
+            <div class="topbar-left">
+                <div class="menu-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></div>
+                <h2 id="dynamic-page-title" class="page-title">Dashboard Overview</h2>
+            </div>
+            <div class="topbar-right">
+                <a href="index.html" class="header-btn outline-btn"><i class="fas fa-house"></i> <span>Back to
+                        Home</span></a>
+                <button onclick="logout()" class="header-btn logout-btn"><i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span></button>
+            </div>
+        </header>
+
+        <div class="dashboard-body">
+
+            <!-- ==========================================
+                 TAB 1: OVERVIEW 
+            =========================================== -->
+            <div id="tab-overview" class="content-tab active-tab">
+
+                <div class="stats-grid">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-box-open stat-icon"></i>
+                        <div class="stat-details">
+                            <h3>Total Orders</h3>
+                            <h2>12</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-star stat-icon"></i>
+                        <div class="stat-details">
+                            <h3>Reward Points</h3>
+                            <h2>450</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-truck-fast stat-icon"></i>
+                        <div class="stat-details">
+                            <h3>Active Deliveries</h3>
+                            <h2>01</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="split-layout mt-30">
+                    <div class="premium-card flex-2" data-aos="fade-right">
+                        <h3 class="card-title">Monthly Spending Overview</h3>
+                        <div class="chart-container">
+                            <canvas id="spendingChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="premium-card flex-1" data-aos="fade-left">
+                        <h3 class="card-title">Current Order Status</h3>
+                        <div class="order-tracker">
+                            <img src="./asset/a9.webp" alt="Cake" class="tracker-img">
+                            <h4>Classic Choco Truffle</h4>
+                            <p class="status-text text-red"><i class="fas fa-spinner fa-spin"></i> Baking in progress...
+                            </p>
+                            <div class="progress-bar-container mt-15">
+                                <div class="progress-bar" style="width: 60%;"></div>
+                            </div>
+                            <p class="eta">ETA: Today, 5:00 PM</p>
+                            <button class="btn-small outline-red mt-15 width-100"
+                                onclick="window.location.href='404page.html'">Track Driver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="section-title mt-30" data-aos="fade-up">Trending Now</h3>
+                <div class="trending-grid mt-15" data-aos="fade-up">
+                    <div class="trend-card">
+                        <img src="./asset/a13.webp" alt="Trend">
+                        <div class="trend-info">
+                            <h4>Belgian Dark Chocolate</h4>
+                            <p>₹950 / kg</p>
+                            <button class="btn-small outline-red mt-10"
+                                onclick="window.location.href='404page.html'">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="trend-card">
+                        <img src="./asset/a36.webp" alt="Trend">
+                        <div class="trend-info">
+                            <h4>Floral Vanilla Fondant</h4>
+                            <p>₹1200 / kg</p>
+                            <button onclick="window.location.href='404page.html'"
+                                class="btn-small outline-red mt-10">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="trend-card">
+                        <img src="./asset/a16.webp" alt="Trend">
+                        <div class="trend-info">
+                            <h4>Assorted Cookie Box</h4>
+                            <p>₹450 / box</p>
+                            <button onclick="window.location.href='404page.html'"
+                                class="btn-small outline-red mt-10">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="promo-banner mt-30" data-aos="fade-up"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./asset/a4.webp');">
+                    <div class="promo-content">
+                        <h2>Seasonal Special: Berry Bliss Cupcakes</h2>
+                        <p>Get 20% off on your next order of our freshly baked berry cupcakes. Valid till this weekend!
+                        </p>
+                        <button onclick="window.location.href='404page.html'" class="btn-red">Claim Offer</button>
+                    </div>
+                </div>
+
+                <div class="split-layout mt-30">
+                    <div class="premium-card flex-1" data-aos="fade-up">
+                        <h3 class="card-title">Your Recent Reviews</h3>
+                        <div class="review-box">
+                            <div class="stars text-red"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="mt-10 text-gray">"The chocolate truffle cake was amazing! Perfect balance of
+                                sweetness and rich cocoa. Delivery was on time."</p>
+                            <span class="review-date text-gray" style="font-size: 12px;">- Oct 12, 2026</span>
+                        </div>
+                    </div>
+                    <div class="premium-card flex-1" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="card-title">Quick Actions</h3>
+                        <div class="action-grid mt-10">
+                            <div class="action-box"><i class="fas fa-plus-circle"></i><span>New Order</span></div>
+                            <div class="action-box"><i class="fas fa-headset"></i><span>Support</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 2: MY ORDERS 
+            =========================================== -->
+            <div id="tab-orders" class="content-tab">
+                <div class="info-banner red-bg" data-aos="fade-down">
+                    <i class="fas fa-receipt"></i>
+                    <div>
+                        <h3>Your Order History & Deliveries</h3>
+                        <p>Track live deliveries, view past purchases, and download official invoices.</p>
+                    </div>
+                </div>
+
+                <div class="premium-card mt-30" data-aos="fade-up">
+                    <h3 class="card-title">Live Delivery Tracking</h3>
+                    <div class="split-layout">
+                        <div class="flex-2 delivery-map"
+                            style="background: url('./asset/a4.webp') center/cover; height: 250px; border-radius: 15px; position: relative;">
+                            <div class="map-pin"><i class="fas fa-map-marker-alt"></i></div>
+                        </div>
+                        <div class="flex-1 driver-info-box">
+                            <h4>Delivery Partner</h4>
+                            <div class="driver-profile mt-10">
+                                <div class="dp-img"><i class="fas fa-motorcycle"></i></div>
+                                <div>
+                                    <h5>Ramesh K.</h5>
+                                    <p class="text-gray"><i class="fas fa-star text-red"></i> 4.8 Ratings</p>
+                                </div>
+                            </div>
+                            <div class="call-actions mt-20">
+                                <button onclick="window.location.href='404page.html'" class="btn-red width-100"><i
+                                        class="fas fa-phone"></i> Call Driver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-card mt-30" data-aos="fade-up">
+                    <h3 class="card-title">All Past Orders</h3>
+                    <div class="table-responsive">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Item Details</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#ORD-8821</td>
+                                    <td><strong>Red Velvet Cake</strong><br><span class="text-gray"
+                                            style="font-size: 12px;">1kg, Eggless</span></td>
+                                    <td>Oct 15, 2026</td>
+                                    <td><span class="badge success">Delivered</span></td>
+                                    <td>₹850</td>
+                                    <td><button class="text-btn"
+                                            onclick="window.location.href='404page.html'">Invoice</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-8705</td>
+                                    <td><strong>Assorted Macarons</strong><br><span class="text-gray"
+                                            style="font-size: 12px;">Box of 6</span></td>
+                                    <td>Sep 28, 2026</td>
+                                    <td><span class="badge success">Delivered</span></td>
+                                    <td>₹450</td>
+                                    <td><button class="text-btn"
+                                            onclick="window.location.href='404page.html'">Invoice</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-8644</td>
+                                    <td><strong>Custom Wedding Tier</strong><br><span class="text-gray"
+                                            style="font-size: 12px;">3kg, Floral</span></td>
+                                    <td>Sep 10, 2026</td>
+                                    <td><span class="badge pending">Processing</span></td>
+                                    <td>₹4500</td>
+                                    <td><button class="text-btn"
+                                            onclick="window.location.href='404page.html'">Details</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="split-layout mt-30">
+                    <div class="premium-card flex-2" data-aos="fade-right">
+                        <h3 class="card-title">Reorder Favorites</h3>
+                        <div class="reorder-grid">
+                            <div class="reorder-item">
+                                <img src="./asset/a50.webp" alt="Item">
+                                <div>
+                                    <h4>Choco Truffle</h4>
+                                    <button class="btn-small outline-red"
+                                        onclick="window.location.href='404page.html'">Reorder (₹950)</button>
+                                </div>
+                            </div>
+                            <div class="reorder-item">
+                                <img src="./asset/a43.webp" alt="Item">
+                                <div>
+                                    <h4>Vanilla Cupcakes</h4>
+                                    <button class="btn-small outline-red"
+                                        onclick="window.location.href='404page.html'">Reorder (₹350)</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card flex-1" data-aos="fade-left">
+                        <h3 class="card-title">Your Flavor Profile</h3>
+                        <div class="chart-container" style="height: 180px;">
+                            <canvas id="flavorChart"></canvas>
+                        </div>
+                        <p class="text-center mt-10 text-gray" style="font-size: 13px;">You love Chocolate the most!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 3: CUSTOM CAKE REQUESTS
+            =========================================== -->
+            <div id="tab-custom" class="content-tab">
+                <div class="premium-card flex-row-center bg-dark text-white" data-aos="fade-down"
+                    style="background: var(--dark-text); color: white;">
+                    <div class="frc-text">
+                        <h3 class="card-title mb-5 text-white" style="color:white;">Have a dream cake in mind?</h3>
+                        <p style="color:#ccc;">Submit a custom request with your reference images and details. We bake
+                            your imagination.</p>
+                    </div>
+                    <button class="btn-red" onclick="window.location.href='404page.html'"><i class="fas fa-plus"></i>
+                        New Request</button>
+                </div>
+
+                <div class="premium-card mt-30" data-aos="fade-up">
+                    <h3 class="card-title">Active Status: Wedding Cake (Req #CR-992)</h3>
+                    <div class="timeline-container">
+                        <div class="time-node active"><i class="fas fa-check"></i>
+                            <p>Request Sent</p>
+                        </div>
+                        <div class="time-line active"></div>
+                        <div class="time-node active"><i class="fas fa-comments"></i>
+                            <p>Details Discussed</p>
+                        </div>
+                        <div class="time-line active"></div>
+                        <div class="time-node active"><i class="fas fa-file-invoice-dollar"></i>
+                            <p>Quote Paid</p>
+                        </div>
+                        <div class="time-line"></div>
+                        <div class="time-node"><i class="fas fa-cake-candles"></i>
+                            <p>Baking Now</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="split-layout mt-30">
+                    <div class="premium-card flex-1" data-aos="fade-right">
+                        <h3 class="card-title">Reference Images Provided</h3>
+                        <div class="mini-gallery">
+                            <img src="./asset/a1.webp" alt="Ref 1">
+                            <img src="./asset/a34.webp" alt="Ref 2">
+                        </div>
+                    </div>
+
+                    <div class="premium-card flex-1" data-aos="fade-left">
+                        <h3 class="card-title">Baker's Chat</h3>
+                        <div class="chat-box">
+                            <p class="baker-msg">"Hi! We can definitely do the floral design. Would you prefer vanilla
+                                buttercream or fondant for the outer layer?"</p>
+                            <p class="user-msg mt-10">"Let's go with Vanilla Buttercream please!"</p>
+                            <div style="clear: both; margin-top: 15px; padding-top: 15px;">
+                                <button class="btn-small outline-red width-100"
+                                    onclick="window.location.href='404page.html'"><i class="fas fa-comment-dots"></i>
+                                    Open
+                                    Chat Console</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="section-title mt-30" data-aos="fade-up">Need Inspiration?</h3>
+                <p class="text-gray mb-15" data-aos="fade-up">Browse our past custom creations to get ideas for your
+                    next event.</p>
+                <div class="trending-grid" data-aos="fade-up">
+                    <div class="inspire-card"><img src="./asset/a17.webp" alt="Kids">
+                        <h4>Kids Themes</h4>
+                    </div>
+                    <div class="inspire-card"><img src="./asset/a18.webp" alt="Wedding">
+                        <h4>Elegant Weddings</h4>
+                    </div>
+                    <div class="inspire-card"><img src="./asset/a49.webp" alt="Party">
+                        <h4>Party Cupcakes</h4>
+                    </div>
+                </div>
+
+                <div class="premium-card mt-30" data-aos="fade-up">
+                    <h3 class="card-title">Custom Order Guidelines</h3>
+                    <ul class="article-list">
+                        <li><i class="fas fa-info-circle text-red"></i> <strong>Notice Period:</strong> We require at
+                            least 48 hours notice for custom 1-tier cakes, and 1 week for multi-tier cakes.</li>
+                        <li><i class="fas fa-info-circle text-red"></i> <strong>Allergies:</strong> Please specify
+                            peanut, gluten, or dairy allergies strictly in the request form.</li>
+                        <li><i class="fas fa-info-circle text-red"></i> <strong>Changes:</strong> Design changes can
+                            only be accommodated up to 24 hours before delivery.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 4: FAVORITES
+            =========================================== -->
+            <div id="tab-favorites" class="content-tab">
+                <h2 class="section-title" data-aos="fade-right">Your Sweet Collection</h2>
+
+                <div class="fav-grid mt-20">
+                    <div class="fav-card" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="./asset/a2.webp" alt="Cake">
+                        <div class="fav-info">
+                            <h4>Dark Fantasy Cake</h4>
+                            <i class="fas fa-heart text-red"></i>
+                        </div>
+                    </div>
+                    <div class="fav-card" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="./asset/a50.webp" alt="Cupcake">
+                        <div class="fav-info">
+                            <h4>Classic Vanilla Muffins</h4>
+                            <i class="fas fa-heart text-red"></i>
+                        </div>
+                    </div>
+                    <div class="fav-card" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="./asset/a16.webp" alt="Cookies">
+                        <div class="fav-info">
+                            <h4>Choco Chip Cookies</h4>
+                            <i class="fas fa-heart text-red"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="split-layout mt-30">
+                    <div class="premium-card flex-2" data-aos="fade-right">
+                        <h3 class="card-title">Chef's Recommendations For You</h3>
+                        <p class="text-gray mb-15">Because you liked "Dark Fantasy Cake", try these:</p>
+                        <div class="reorder-grid">
+                            <div class="reorder-item">
+                                <img src="./asset/a39.webp" alt="Rec">
+                                <div>
+                                    <h4>Hazelnut Praline Cake</h4>
+                                    <p class="text-gray" style="font-size: 12px;">Rich cocoa with roasted hazelnuts.</p>
+                                </div>
+                                <button class="btn-icon text-red" onclick="window.location.href='404page.html'"
+                                    style="margin-left:auto;"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card flex-1" data-aos="fade-left">
+                        <h3 class="card-title">Dietary Preferences</h3>
+                        <div class="tag-cloud">
+                            <span class="tag"><i class="fas fa-leaf"></i> Eggless</span>
+                            <span class="tag"><i class="fas fa-wheat-awn-circle-exclamation"></i> Gluten-Free</span>
+                        </div>
+                        <button class="text-btn mt-20" onclick="window.location.href='404page.html'">Update
+                            Preferences</button>
+                    </div>
+                </div>
+
+                <div class="premium-card mt-30 flex-row-center" data-aos="fade-up"
+                    style="background: #fff5f5; border: 1px dashed var(--primary-red);">
+                    <div class="frc-text">
+                        <h3 class="card-title text-red mb-5">Hinting at a Gift?</h3>
+                        <p class="text-gray">Share your favorites collection with friends and family for your upcoming
+                            birthday!</p>
+                    </div>
+                    <button class="btn-red" onclick="window.location.href='404page.html'"><i
+                            class="fab fa-whatsapp"></i> Share Wishlist</button>
+                </div>
+
+                <div class="video-card mt-30" data-aos="fade-up" style="background-image: url('./asset/a5.webp');">
+                    <div class="play-btn"><i class="fas fa-play"></i></div>
+                    <h3>Watch: Behind the Scenes in our Bakery</h3>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 5: REWARDS & LOYALTY
+            =========================================== -->
+            <div id="tab-rewards" class="content-tab">
+                <div class="split-layout">
+                    <div class="tier-card gold-tier flex-1" data-aos="fade-right">
+                        <i class="fas fa-crown tier-icon"></i>
+                        <h3>Gold Member</h3>
+                        <p>You earn 2x points on every order!</p>
+                        <h1>450 <span>pts</span></h1>
+                    </div>
+                    <div class="premium-card flex-2" data-aos="fade-left">
+                        <h3 class="card-title">Journey to Platinum</h3>
+                        <p class="text-gray mb-15">Earn 550 more points to unlock free delivery.</p>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 45%;"></div>
+                        </div>
+                        <div class="progress-labels mt-10">
+                            <span>0</span>
+                            <span>1000 pts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="section-title mt-30" data-aos="fade-up">Available Vouchers</h3>
+                <div class="coupon-grid mt-20" data-aos="fade-up">
+                    <div class="coupon-card">
+                        <div class="c-left">
+                            <h3>10% OFF</h3>
+                            <p>On Custom Cakes</p>
+                        </div>
+                        <div class="c-right"><button class="btn-small outline-red"
+                                onclick="window.location.href='404page.html'">Redeem</button></div>
+                    </div>
+                    <div class="coupon-card">
+                        <div class="c-left">
+                            <h3>FREE</h3>
+                            <p>Box of Cookies</p>
+                        </div>
+                        <div class="c-right"><button class="btn-small outline-red"
+                                onclick="window.location.href='404page.html'">Redeem</button></div>
+                    </div>
+                </div>
+
+                <div class="premium-card mt-30" data-aos="fade-up">
+                    <h3 class="card-title">Milestone Unlockables</h3>
+                    <div class="milestone-tracker">
+                        <div class="m-box unlocked"><i class="fas fa-unlock text-success"></i>
+                            <p>200 pts<br><strong>Free Donut</strong></p>
+                        </div>
+                        <div class="m-line"></div>
+                        <div class="m-box current"><i class="fas fa-gift text-red"></i>
+                            <p>500 pts<br><strong>10% Discount</strong></p>
+                        </div>
+                        <div class="m-line"></div>
+                        <div class="m-box locked"><i class="fas fa-lock text-gray"></i>
+                            <p>1000 pts<br><strong>Platinum Tier</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="split-layout mt-30">
+                    <div class="premium-card flex-1" data-aos="fade-right">
+                        <h3 class="card-title">How to earn?</h3>
+                        <div class="earn-list">
+                            <div class="earn-item"><i class="fas fa-shopping-cart"></i>
+                                <div>
+                                    <h4>Make a purchase</h4>
+                                    <p>1 pt per ₹100 spent</p>
+                                </div>
+                            </div>
+                            <div class="earn-item"><i class="fas fa-star"></i>
+                                <div>
+                                    <h4>Leave a review</h4>
+                                    <p>50 pts per review</p>
+                                </div>
+                            </div>
+                            <div class="earn-item"><i class="fas fa-user-plus"></i>
+                                <div>
+                                    <h4>Refer a friend</h4>
+                                    <p>100 pts per referral</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card flex-1" data-aos="fade-left"
+                        style="background: var(--bg-cream); border: 1px solid var(--border-color);">
+                        <div style="text-align:center; padding: 20px 0;">
+                            <i class="fas fa-birthday-cake text-red" style="font-size: 50px; margin-bottom: 15px;"></i>
+                            <h3 class="card-title">Birthday Club</h3>
+                            <div class="saved-data mb-15 mt-10"><strong>Your Birthday:</strong> 15th October</div>
+                            <p class="text-gray mb-15">You will receive a surprise sweet treat from us on your special
+                                day!</p>
+                            <button class="btn-red" onclick="window.location.href='404page.html'"
+                                style="opacity:0.8; cursor:not-allowed; margin: 0 auto;">Active
+                                Member <i class="fas fa-check-circle"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 6: SETTINGS (Forms Removed)
+            =========================================== -->
+            <div id="tab-settings" class="content-tab">
+                <div class="premium-card flex-row-center" data-aos="fade-down">
+                    <div class="prof-large">
+                        <div class="pl-avatar"><i class="fas fa-user-circle"></i></div>
+                        <div class="pl-info">
+                            <h2 id="settingsName">Customer</h2>
+                            <p id="settingsEmail">customer@sweetcrumbs.com</p>
+                        </div>
+                    </div>
+                    <button class="btn-red" onclick="window.location.href='404page.html'"><i
+                            class="fas fa-pencil-alt"></i> Edit Info</button>
+                </div>
+
+                <div class="split-layout mt-30">
+                    <div class="premium-card flex-2" data-aos="fade-right">
+                        <h3 class="card-title">Personal Information</h3>
+                        <div class="info-display-grid mt-20">
+                            <div class="info-box">
+                                <p class="text-gray">Phone Number</p>
+                                <h4>+91 98765 43210</h4>
+                            </div>
+                            <div class="info-box">
+                                <p class="text-gray">Date of Birth</p>
+                                <h4>15 Oct 1995</h4>
+                            </div>
+                            <div class="info-box" style="grid-column: 1 / -1;">
+                                <p class="text-gray">Delivery Address</p>
+                                <h4>12/4, Bakery Lane, Tech Park Area, Bengaluru - 560001</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card flex-1" data-aos="fade-left">
+                        <h3 class="card-title">Notifications</h3>
+                        <div class="toggle-row mt-15">
+                            <span>Order Updates (SMS)</span>
+                            <label class="switch"><input type="checkbox" checked><span
+                                    class="slider round"></span></label>
+                        </div>
+                        <div class="toggle-row mt-15">
+                            <span>Promo & Offer Emails</span>
+                            <label class="switch"><input type="checkbox"><span class="slider round"></span></label>
+                        </div>
+                        <div class="toggle-row mt-15">
+                            <span>WhatsApp Alerts</span>
+                            <label class="switch"><input type="checkbox" checked><span
+                                    class="slider round"></span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="split-layout mt-30">
+                    <div class="premium-card flex-1" data-aos="fade-up">
+                        <h3 class="card-title">Linked Social Accounts</h3>
+                        <p class="text-gray mb-15">Connect your accounts for a faster login experience.</p>
+                        <div class="toggle-row mt-10">
+                            <span><i class="fab fa-google text-red" style="font-size: 18px; margin-right: 10px;"></i>
+                                Google</span>
+                            <button class="btn-small outline-red"
+                                onclick="window.location.href='404page.html'">Disconnect</button>
+                        </div>
+                        <div class="toggle-row mt-10">
+                            <span><i class="fab fa-facebook text-primary"
+                                    style="font-size: 18px; margin-right: 10px;"></i> Facebook</span>
+                            <button class="btn-small outline-btn"
+                                onclick="window.location.href='404page.html'">Connect</button>
+                        </div>
+                    </div>
+
+                    <div class="premium-card flex-1" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="card-title">Security & Devices</h3>
+                        <p class="text-gray mb-15">Manage your active sessions and password.</p>
+                        <button onclick="window.location.href='404page.html'"
+                            class="outline-btn btn-small width-100 mb-15" style="padding: 12px;"><i
+                                class="fas fa-key"></i> Change Password</button>
+
+                        <div class="earn-item"
+                            style="padding: 10px; background: transparent; border: 1px solid var(--border-color);">
+                            <i class="fas fa-mobile-alt" style="box-shadow: none; border: 1px solid #ccc;"></i>
+                            <div>
+                                <h4 style="font-size: 13px;">iPhone 14 Pro (Current)</h4>
+                                <p style="font-size: 11px;">Bengaluru, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-card mt-30 danger-zone" data-aos="fade-up">
+                    <h3 class="card-title text-red">Danger Zone</h3>
+                    <p class="mb-15">Once you delete your account, there is no going back. All order history and reward
+                        points will be permanently deleted.</p>
+                    <button class="btn-small btn-danger" onclick="window.location.href='404page.html'">Delete Account
+                        Permanently</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            let storedEmail = sessionStorage.getItem('userEmail');
+
+
+            if (!storedEmail) {
+                alert("Unauthorized Access! Please login first to view your dashboard.");
+                window.location.replace("login.html");
+                return; 
+            }
+
+
+            let extractedName = storedEmail.split('@')[0];
+            extractedName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
+
+
+            document.getElementById("userNameDisplay").textContent = extractedName;
+            document.getElementById("userEmailDisplay").textContent = storedEmail;
+
+            const settingsName = document.getElementById("settingsName");
+            const settingsEmail = document.getElementById("settingsEmail");
+            if (settingsName) settingsName.textContent = extractedName;
+            if (settingsEmail) settingsEmail.textContent = storedEmail;
+
+
+            AOS.init({ duration: 800, once: true, offset: 50 });
+
+
+            initCharts();
+        });
+
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            sidebar.classList.toggle('mobile-open');
+            if (sidebar.classList.contains('mobile-open')) {
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            } else {
+                overlay.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+
+        function switchTab(tabId, element, pageTitle) {
+            document.querySelectorAll('.content-tab').forEach(tab => tab.classList.remove('active-tab'));
+            document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active-tab');
+            element.classList.add('active');
+            document.getElementById('dynamic-page-title').innerText = pageTitle;
+
+            setTimeout(() => { AOS.refresh(); }, 100);
+            if (window.innerWidth <= 992) { toggleSidebar(); }
+        }
+
+
+        function logout() {
+            sessionStorage.removeItem('userEmail');
+            window.location.replace("login.html");
+        }
+
+
+        function initCharts() {
+
+            const ctx1 = document.getElementById('spendingChart');
+            if (ctx1) {
+                new Chart(ctx1, {
+                    type: 'bar',
+                    data: {
+                        labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+                        datasets: [{
+                            label: 'Amount Spent (₹)',
+                            data: [1200, 850, 400, 3200, 450, 1800],
+                            backgroundColor: '#de3545',
+                            borderRadius: 5,
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            y: { beginAtZero: true, grid: { color: '#eee' } },
+                            x: { grid: { display: false } }
+                        }
+                    }
+                });
+            }
+
+
+            const ctx2 = document.getElementById('flavorChart');
+            if (ctx2) {
+                new Chart(ctx2, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Chocolate', 'Vanilla', 'Red Velvet', 'Fruit'],
+                        datasets: [{
+                            data: [50, 20, 15, 15],
+                            backgroundColor: ['#4e342e', '#f1c40f', '#de3545', '#e67e22'],
+                            borderWidth: 2,
+                            borderColor: '#ffffff'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '70%',
+                        plugins: { legend: { position: 'right', labels: { boxWidth: 10, font: { size: 11 } } } }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
