@@ -615,7 +615,8 @@
 
 
             nameInput.addEventListener("input", function () {
-                this.value = this.value.replace(/[0-9]/g, '');
+                // [^a-zA-Z\s] -> இது letters மற்றும் space-அ தவிர வேற எத டைப் பண்ணாலும் remove பண்ணிடும்
+                this.value = this.value.replace(/[^a-zA-Z\s]/g, ''); 
                 nameGroup.classList.remove("error");
             });
 
