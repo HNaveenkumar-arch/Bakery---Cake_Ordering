@@ -817,6 +817,16 @@
 }
 
 @media (max-width: 992px) {
+
+  .custom-studio-section {
+      overflow-x: hidden;
+
+  }
+
+  .signature-section{
+      overflow-x: hidden;
+
+  }
   .journey-container {
     flex-direction: column;
   }
